@@ -86,7 +86,7 @@ let firName = prompt('Input your first name');
 
 let midName = prompt('Input your middle name');
 
-let age = prompt('Input your age');
+let age = +prompt('Input your age');
 
 console.log(`Your full name is  ${firName} ${midName} and your age is ${age}`);
 
