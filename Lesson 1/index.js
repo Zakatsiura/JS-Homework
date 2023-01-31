@@ -86,9 +86,9 @@ let firName = prompt('Input your first name');
 
 let midName = prompt('Input your middle name');
 
-let lstName = prompt('Input your last name');
+let age = prompt('Input your age');
 
-console.log(`Your full name is  ${firName} ${midName} ${lstName}`);
+console.log(`Your full name is  ${firName} ${midName} and your age is ${age}`);
 
-alert(`Your full name is  ${firName} ${midName} ${lstName}`);
+alert(`Your full name is  ${firName} ${midName} and your age is ${age}`);
 
