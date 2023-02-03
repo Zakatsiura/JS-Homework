@@ -162,7 +162,7 @@ if (a !== 0) {
 
 let time = -8;
 
-switch (true) {
+switch (time) {
     case (time >= 0 && time < 15 ):
         console.log('First quarter');
         break;
@@ -183,7 +183,7 @@ switch (true) {
 
 let day = 118;
 
-switch (true) {
+switch (time) {
     case (day > 0 && day < 11):
         console.log('First part');
         break;
@@ -239,7 +239,7 @@ let number1 = +prompt('Input first number');
 
 let number2 = +prompt('Input second number');
 
-if (typeof(number1) !== Number || typeof(number2) !== Number) {
+if (typeof(number1) != 'number' || typeof(number2) !== 'number') {
     alert('Incorrect input');
 } else {
     (number1 > number2) ?
