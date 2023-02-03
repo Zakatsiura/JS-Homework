@@ -2,9 +2,20 @@
 
 let arr = [1, true, 3, 4, 5, 6, 67, 8, 'string', 564];
 
-for(let i = 0; i < 10; i++) {
-    console.log(arr[i]);
-}
+// for(let i = 0; i < 10; i++) {
+//     console.log(arr[i]);
+// }
+
+console.log(arr[0]);
+console.log(arr[1]);
+console.log(arr[2]);
+console.log(arr[3]);
+console.log(arr[4]);
+console.log(arr[5]);
+console.log(arr[6]);
+console.log(arr[7]);
+console.log(arr[8]);
+console.log(arr[9]);
 
 // - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
 
@@ -32,14 +43,14 @@ let book4 = {
     title: 'Elementary Mathematics',
     pageCount: 467,
     genre: 'science',
-    authors4: [author1 = {name: 'Author1', age: 'age1'}, author2 = {name: 'Author2', age: 'age2'}],
+    authors4: [['Author1', 'age1'], ['Author2', 'age2']],
 }
 
 let book5 = {
     title: 'Higher Mathematics',
     pageCount: 544,
     genre: 'science',
-    authors5: [author1 = {name: 'Author1', age: 'age1'}, author2 = {name: 'Author1', age: 'age2'}],
+    authors5: [['Author1', 'age1'], ['Author1', 'age2']],
 
 }
 
@@ -47,70 +58,73 @@ let book6 = {
     title: 'The Expance',
     pageCount: 741,
     genre: 'sci-fy',
-    authors6: [author1 = {name: 'Author1', age: 'age1'}, author2 = {name: 'Author1', age: 'age2'}],
+    authors6: [['Author1', 'age1'], ['Author1', 'age2']],
 
 }
-// console.log(book6.authors6[0].name)
-// console.log(book5.authors5[1].age)
+console.log(book6.authors6[0][0])
+console.log(book5.authors5[1][0])
 
 // - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
 
 let arr1 = [
-    user1 = {
+    {
         name: 'user1Name',
         username: 'user1Username',
         password: 1111,
     },
-    user2 = {
+    {
         name: 'user2Name',
         username: 'user2Username',
         password: 2222,
     },
-    user3 = {
+    {
         name: 'user3Name',
         username: 'user3Username',
         password: 3333,
     },
-    user4 = {
+    {
         name: 'user4Name',
         username: 'user4Username',
         password: 4444,
     },
-    user5 = {
+    {
         name: 'user5Name',
         username: 'user5Username',
         password: 5555,
     },
-    user6 = {
+    {
         name: 'user6Name',
         username: 'user6Username',
         password: 6666,
     },
-    user7 = {
+    {
         name: 'user7Name',
         username: 'user7Username',
         password: 7777,
     },
-    user8 = {
+    {
         name: 'user8Name',
         username: 'user8Username',
         password: 8888,
     },
-    user9 = {
+    {
         name: 'user9Name',
         username: 'user9Username',
         password: 9999,
     },
-    user10 = {
+    {
         name: 'user10Name',
         username: 'user10Username',
         password: 1010,
     },
 ];
 
-for(let j=0; j < 10; j++) {
-    console.log(arr1[j].password)
-};
+// for(let j=0; j < 10; j++) {
+//     console.log(arr1[j].password)
+// };
+
+
+
 
 // Логічні розгалуження:
 // - Є змінна х, якій ви надаєте довільне числове значення.
@@ -146,35 +160,41 @@ if (a !== 0) {
 // - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число
 // (в першу, другу, третю или четверту частину години).
 
-let time = 18;
+let time = -8;
 
 switch (true) {
-    case (time < 15):
+    case (time >= 0 && time < 15 ):
         console.log('First quarter');
         break;
-    case (time < 30):
+    case (time >= 15 && time < 30):
         console.log('Second quarter');
         break;
-    case (time < 45):
+    case (time >= 30 && time < 45):
         console.log('Third quarter');
         break;
-    default:
+    case (time >= 45 && time < 60):
         console.log('Fourth quarter');
+        break;
+    default:
+        console.log('Incorrect input')
 };
 
 // - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
 
-let day = 18;
+let day = 118;
 
 switch (true) {
-    case (day < 11):
+    case (day > 0 && day < 11):
         console.log('First part');
         break;
-    case (day < 21):
+    case (day >= 11 && day < 21):
         console.log('Second part');
         break;
-    default:
+    case (day >= 21 && day < 32):
         console.log('Third part');
+        break;
+    default:
+        console.log('Incorrect input');
 };
 
 
@@ -219,7 +239,7 @@ let number1 = +prompt('Input first number');
 
 let number2 = +prompt('Input second number');
 
-if (typeof(number1) !== Number && typeof(number2) !== Number) {
+if (typeof(number1) !== Number || typeof(number2) !== Number) {
     alert('Incorrect input');
 } else {
     (number1 > number2) ?
@@ -231,17 +251,17 @@ if (typeof(number1) !== Number && typeof(number2) !== Number) {
 // - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
 //   за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)
 
-let y = 0;
+// let y = 0;
 
 // для виключення любого хибноподібного значення:
 
-let x = y || 'Default';
+// let x = y || 'Default';
 
 // для виключення лише null та undefined:
 
-let x = y ?? 'Defoult';
-
-console.log(x);
+// let x = y ?? 'Defoult';
+//
+// console.log(x);
 
 
 
@@ -257,8 +277,23 @@ let coursesAndDurationArray = [
     {title: 'FullStack', monthDuration: 7},
     {title: 'Frontend', monthDuration: 4}
 ];
-for (k = 0; k < coursesAndDurationArray.length; k++) {
-    if (coursesAndDurationArray[k].monthDuration > 5) {
-        console.log('Super');
-    };
-}
+// for (k = 0; k < coursesAndDurationArray.length; k++) {
+//     if (coursesAndDurationArray[k].monthDuration > 5) {
+//         console.log('Super');
+//     };
+// }
+if (coursesAndDurationArray[0].monthDuration > 5) {
+    console.log('Super');
+};
+if (coursesAndDurationArray[1].monthDuration > 5) {
+    console.log('Super');
+};
+if (coursesAndDurationArray[2].monthDuration > 5) {
+    console.log('Super');
+};
+if (coursesAndDurationArray[3].monthDuration > 5) {
+    console.log('Super');
+};
+if (coursesAndDurationArray[4].monthDuration > 5) {
+    console.log('Super');
+};
