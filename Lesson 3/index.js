@@ -116,9 +116,10 @@ let products = [
 ];
 
 for(let l = 0; l < products.length; l++) {
+    const product = products[l];
     document.write(`<div className="product-card">
-        <h3 className="product-title">${products[l].title} Price - ${products[l].price}</h3>
-        <img src="${products[l].image}" alt="" className="product-image">
+        <h3 className="product-title">${product.title} Price - ${product.price} UAH</h3>
+        <img src="${product.image}" width="200px" alt="img" className="product-image">
     </div>`);
 }
 
