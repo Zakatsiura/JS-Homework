@@ -16,7 +16,6 @@ for(let i = 0; i < 10; i++) {
 
 // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
 let i = 0;
-
 while(i < 20) {
     document.write(`<h1>This is text</h1>`);
     i++;
@@ -117,9 +116,9 @@ let products = [
 
 for(let l = 0; l < products.length; l++) {
     const product = products[l];
-    document.write(`<div className="product-card">
-        <h3 className="product-title">${product.title} Price - ${product.price} UAH</h3>
-        <img src="${product.image}" width="200px" alt="img" className="product-image">
+    document.write(`<div class="product-card">
+        <h3 class="product-title">${product.title} Price - ${product.price} UAH</h3>
+        <img src="${product.image}" width="200px" alt="img" class="product-image">
     </div>`);
 }
 
@@ -161,22 +160,22 @@ let users = [
 
 
 document.write(`користувачі зі статусом true:`)
-for (let t = 0; t < users.length; t++) {
-    if (users[t].status === true) {
-        document.write(`<ul><li>${users[t].name}</ul></li>`);
+for (let user of users) {
+    if (user.status === true) {
+        document.write(`<ul><li>${user.name}</ul></li>`);
     }
 }
 
 document.write(`користувачі зі статусом false:`)
-for (let t = 0; t < users.length; t++) {
-    if (users[t].status === false) {
-        document.write(`<ul><li>${users[t].name}</ul></li>`);
+for (let user of users) {
+    if (user.status === false) {
+        document.write(`<ul><li>${user.name}</ul></li>`);
     }
 }
 
 document.write(`користувачі, які старші за 30 років:`)
-for (let t = 0; t < users.length; t++) {
-    if (users[t].age > 30) {
-        document.write(`<ul><li>${users[t].name}</ul></li>`);
+for (let user of users) {
+    if (user.age > 30) {
+        document.write(`<ul><li>${user.name}</ul></li>`);
     }
 }
