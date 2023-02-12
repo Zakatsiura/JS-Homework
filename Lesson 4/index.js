@@ -130,13 +130,13 @@ function min(array) {
 min(arr3)
 
 
-// function min2 (array) {
-//     let minNumber2;
-//     minNumber2 = Math.min(...array);
-//     console.log(minNumber2);
-//     return minNumber2;
-// }
-// min2(arr3)
+function min2 (array) {
+    let minNumber2;
+    minNumber2 = Math.min(...array);
+    console.log(minNumber2);
+    return minNumber2;
+}
+min2(arr3)
 
 
 
@@ -157,11 +157,20 @@ function sum(arr) {
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
 
 function swap(arr,index1,index2) {
+    let temp = arr[index1];
+    arr[index1] = arr[index2];
+    arr[index2] = temp;
+    console.log(arr);
+    return arr;
+}
+swap([11,22,33,44],0,1);
+
+function swap1(arr,index1,index2) {
     [arr[index1], arr[index2]] = [arr[index2], arr[index1]];
     console.log(arr);
 }
 
-swap([11,22,33,44],0,1)
+swap1([11,22,33,44],0,1);
 
 function swap2(arr,index1,index2) {
         arr[index1] = arr.splice(index2, 1, arr[index1])[0];
@@ -169,7 +178,7 @@ function swap2(arr,index1,index2) {
         return arr;
 }
 
-swap2([11,22,33,44],0,1)
+swap2([11,22,33,44],0,1);
 
 
 
