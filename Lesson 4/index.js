@@ -59,8 +59,8 @@ text('The same text')
 
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 
-let i = 0
 function text2 (text, num) {
+let i = 0
     document.write(`<ul>`);
     while(i < num) {
         document.write(`<li>${text}</li>`);
