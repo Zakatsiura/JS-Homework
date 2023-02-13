@@ -161,6 +161,7 @@ swap([11,22,33,44],0,1);
 
 
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
+// Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 
 
 let arr4 = [{currency:'USD',value:40},{currency:'EUR',value:42}] //виніс масив для зручності
@@ -181,4 +182,113 @@ exchange(10000, arr4,'EUR')
 
 
 
-// Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
+
+// Додаткові завдання:
+
+// Всі функції повинні бути описані стрілочним типом!!!!
+
+// - створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
+
+const minNum = (a, b, c) => {
+    if (a < b && a < c) {
+        return a;
+    } else if (b < a && b < c) {
+        return b;
+    } else if (c < a && c < b) {
+        return c;
+    } else if (a === b && a === c) {
+        return (a);
+    } else if (a === b) {
+        return (a);
+    } else if (a === c) {
+        return (a);
+    } else if (b === c) {
+        return (b)
+    }
+}
+
+console.log(minNum(14, 14, 4))
+
+
+// - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
+
+const maxNum = (a, b, c) => {
+    if (a > b && a > c) {
+        return a;
+    } else if (b > a && b > c) {
+        return b;
+    } else if (c > a && c > b) {
+        return c;
+    } else if (a === b && a === c) {
+        return (a);
+    } else if (a === b) {
+        return (a);
+    } else if (a === c) {
+        return (a);
+    } else if (b === c) {
+        return (b)
+    }
+}
+
+console.log(maxNum(54, 104, 104))
+
+
+
+
+// - створити функцію яка повертає найбільше число з масиву
+
+// let arr3 = [3, 6875, 234, 1, 5342, -3412, 12, 43, -345]; - використав масив arr3, що на 112 рядку
+const max = (array) => {
+    if (array.length === 0) {
+        console.log('Array is empty')
+    } else {
+        let minNumber = array[0];
+        for (let i = 0; i < array.length; i++) {
+            if (minNumber < array[i]) {
+                minNumber = array[i];
+            }
+        }
+        console.log(minNumber);
+        return minNumber;
+    }
+}
+
+max(arr3)
+
+
+
+// - Дано натуральное число n. Выведите все числа от 1 до n.
+
+const lineNum = (n) => {
+    let init = 1;
+    if (n >= init) {
+        for (let i = 0; i < n; i++) {
+            // console.log(init++);
+            return init++;
+        }
+        // додатково для n < 1 виводжу ряд від 1 до -n
+        } else if (n < init) {
+            for (let i = 0; i > (n - 2); i--) {
+                // console.log(init--);
+                return init--;
+        }
+    }
+}
+
+lineNum(1)
+
+// - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
+//
+//
+// - функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
+//   EXAMPLE:
+//   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
+//   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
+//   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
+//
+// - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
+// Двожина масиву від 2 до 100
+// EXAMPLE:
+// [1,0,6,0,3] => [1,6,3,0,0]
+// [0,1,2,3,4] => [1,2,3,4,0]
+// [0,0,1,0]   => [1,0,0,0]
