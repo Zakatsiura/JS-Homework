@@ -1,36 +1,32 @@
 // ВСЕ ЗРОБИТИ СТРІЛОЧНИМИ ФУНКЦІЯМИ!
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 
-const sqRect = (a, b) => {
-    return a * b;
-}
+const sqRect = (a, b) => a * b;
+
 sqRect(5, 3)
 
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
 
-const sqCircle = (r) => {
-    return 3.14 * r * r;
-}
+const sqCircle = (r) => 3.14 * r * r;
 
 sqCircle(4)
 
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 
-const sqCyl = (r, h) => {
-    return ((2 * 3.14 * r * r) + (2 * 3.14 * r * h));
-}
+const sqCyl = (r, h) => ((2 * 3.14 * r * r) + (2 * 3.14 * r * h));
 
 sqCyl(2, 5)
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
 
-let arr = [1, 2, 3, 4]
+let arr = [15, 25, 36, 47, 'Okten']
 
  const elements = () => {
     for(el of arr) {
         console.log(el);
     }
 }
+
 elements (arr);
 
 
@@ -40,6 +36,7 @@ elements (arr);
 const paragraph = (arg) => {
     document.write(`<p>${arg}</p>`);
 }
+
 paragraph('Hello Okten')
 
 
@@ -47,12 +44,9 @@ paragraph('Hello Okten')
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 
 const text = (text) => {
-    document.write(`<ul>`);
-    document.write(`<li>${text}</li>`);
-    document.write(`<li>${text}</li>`);
-    document.write(`<li>${text}</li>`);
-    document.write(`</ul>`);
+    document.write(`<ul><li>${text}</li><li>${text}</li><li>${text}</li></ul>`);
 }
+
 text('The same text')
 
 
@@ -68,6 +62,7 @@ let i = 0
     }
     document.write(`</ul>`);
 }
+
 text2('The same text', 5)
 
 
@@ -82,6 +77,7 @@ const list = () => {
     }
     document.write(`</ol>`);
 }
+
 list(array)
 
 
@@ -106,6 +102,7 @@ const list2 = () => {
     }
     document.write(`</ul>`);
 }
+
 list2(arr2)
 
 
@@ -142,6 +139,7 @@ const sum = (arr) => {
     console.log(sum);
     return sum;
 }
+
 sum(arr3)
 
 
@@ -157,6 +155,7 @@ const swap = (arr,index1,index2) => {
     console.log(arr);
     return arr;
 }
+
 swap([11,22,33,44],0,1);
 
 
