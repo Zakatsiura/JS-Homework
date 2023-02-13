@@ -263,32 +263,77 @@ const lineNum = (n) => {
     let init = 1;
     if (n >= init) {
         for (let i = 0; i < n; i++) {
-            // console.log(init++);
-            return init++;
+            console.log(init++);
         }
         // додатково для n < 1 виводжу ряд від 1 до -n
         } else if (n < init) {
             for (let i = 0; i > (n - 2); i--) {
-                // console.log(init--);
-                return init--;
+                console.log(init--);
         }
     }
 }
 
-lineNum(1)
+lineNum(-3)
 
 // - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
-//
-//
+
+const rowNum = (a, b) => {
+    let row = a;
+    if (a <= b) {
+       for (let i = a; i <= b; i++) {
+           console.log(row++);
+       }
+       } else if (a > b) {
+           for (let i = a; i >= b; i--) {
+               console.log(row--);
+       }
+    }
+}
+
+rowNum(12, 12)
+
+
+
 // - функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
 //   EXAMPLE:
 //   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
 //   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
 //   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
-//
+
+const foo = (arr, i) => {
+    let temp = arr[i + 1];
+    arr[i + 1] = arr[i];
+    arr[i] = temp;
+    console.log(arr);
+    return arr;
+}
+foo([9,8,0,4], 0);
+foo([9,8,0,4], 1);
+foo([9,8,0,4], 2);
+
+
 // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
 // EXAMPLE:
 // [1,0,6,0,3] => [1,6,3,0,0]
 // [0,1,2,3,4] => [1,2,3,4,0]
 // [0,0,1,0]   => [1,0,0,0]
+
+
+const zeroArr = (array) => {
+    if (array.length > 1 && array.length < 101) {
+        for (let i = 0, j = 0; i < array.length; i++) {
+            if (array[i] !== 0) {
+                let temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+                j++;
+            }
+        }
+            console.log(array);
+    }
+}
+
+zeroArr([1,0,6,0,3]);
+zeroArr([0,1,2,3,4]);
+zeroArr([0,0,1,0]);
