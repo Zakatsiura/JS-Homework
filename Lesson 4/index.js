@@ -3,6 +3,7 @@
 function rect(length, width) {
     let sqrR = length * width;
     console.log(`Площа прямокутника = ${sqrR}`);
+    return sqrR;
 }
 rect(10, 20);
 
@@ -12,6 +13,7 @@ rect(10, 20);
 function circle(radius) {
     let sqrC = (3.14 * radius * radius);
     console.log(`Площа кола = ${sqrC}`);
+    return sqrC;
 }
 circle(5);
 
@@ -21,7 +23,8 @@ circle(5);
 
 function cylinder (h, r) {
     let cylS = (2 * 3.14 * r * r) + (2 * 3.14 * r * h);
-    console.log(`Площа поверхні циліндру = ${cylS}`)
+    console.log(`Площа поверхні циліндру = ${cylS}`);
+    return cylS;
 }
 cylinder(10, 35);
 
@@ -47,11 +50,7 @@ paragraph('Hello Okten')
 
 
 function text (text) {
-document.write(`<ul>`);
-    document.write(`<li>${text}</li>`);
-    document.write(`<li>${text}</li>`);
-    document.write(`<li>${text}</li>`);
-document.write(`</ul>`);
+document.write(`<ul><li>${text}</li><li>${text}</li><li>${text}</li></ul>`);
 }
 text('The same text')
 
