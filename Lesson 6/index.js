@@ -137,7 +137,8 @@ filterOfDuration(coursesAndDurationArray)
 // -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
 
 const addID = (arr) => {
-    console.log([...arr].map(el => ({ID: '',... el})))
+    console.log(arr.map(el => ({ID: Math.floor(Math.random() * (1000 - 100) + 100), ...el})));
+    return arr.map(el => ({ID: Math.floor(Math.random() * (1000 - 100) + 100), ...el}));
 }
 
 addID(coursesAndDurationArray)
@@ -146,11 +147,7 @@ addID(coursesAndDurationArray)
 
 // =========================
 //     описати колоду карт (від 6 до туза без джокерів)
-// - знайти піковий туз
-// - всі шістки
-// - всі червоні карти
-// - всі буби
-// - всі трефи від 9 та більше
+
 //
 // {
 //     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
@@ -158,22 +155,223 @@ addID(coursesAndDurationArray)
 //     color:'', // 'red','black'
 // }
 //
+let cards = [
+    {
+        cardSuit: 'spade',
+        value: '6',
+        color: 'black',
+    },
+    {
+        cardSuit: 'spade',
+        value: '7',
+        color: 'black',
+    },
+    {
+        cardSuit: 'spade',
+        value: '8',
+        color: 'black',
+    },
+    {
+        cardSuit: 'spade',
+        value: '9',
+        color: 'black',
+    },
+    {
+        cardSuit: 'spade',
+        value: '10',
+        color: 'black',
+    },
+    {
+        cardSuit: 'spade',
+        value: 'jack',
+        color: 'black',
+    },
+    {
+        cardSuit: 'spade',
+        value: 'queen',
+        color: 'black',
+    },
+    {
+        cardSuit: 'spade',
+        value: 'king',
+        color: 'black',
+    },
+    {
+        cardSuit: 'spade',
+        value: 'ace',
+        color: 'black',
+    },
+    {
+        cardSuit: 'diamond',
+        value: '6',
+        color: 'red',
+    },
+    {
+        cardSuit: 'diamond',
+        value: '7',
+        color: 'red',
+    },
+    {
+        cardSuit: 'diamond',
+        value: '8',
+        color: 'red',
+    },
+    {
+        cardSuit: 'diamond',
+        value: '9',
+        color: 'red',
+    },
+    {
+        cardSuit: 'diamond',
+        value: '10',
+        color: 'red',
+    },
+    {
+        cardSuit: 'diamond',
+        value: 'jack',
+        color: 'red',
+    },
+    {
+        cardSuit: 'diamond',
+        value: 'queen',
+        color: 'red',
+    },
+    {
+        cardSuit: 'diamond',
+        value: 'king',
+        color: 'red',
+    },
+    {
+        cardSuit: 'diamond',
+        value: 'ace',
+        color: 'red',
+    },
+    {
+        cardSuit: 'heart',
+        value: '6',
+        color: 'red',
+    },
+    {
+        cardSuit: 'heart',
+        value: '7',
+        color: 'red',
+    },
+    {
+        cardSuit: 'heart',
+        value: '8',
+        color: 'red',
+    },
+    {
+        cardSuit: 'heart',
+        value: '9',
+        color: 'red',
+    },
+    {
+        cardSuit: 'heart',
+        value: '10',
+        color: 'red',
+    },
+    {
+        cardSuit: 'heart',
+        value: 'jack',
+        color: 'red',
+    },
+    {
+        cardSuit: 'heart',
+        value: 'queen',
+        color: 'red',
+    },
+    {
+        cardSuit: 'heart',
+        value: 'king',
+        color: 'red',
+    },
+    {
+        cardSuit: 'heart',
+        value: 'ace',
+        color: 'red',
+    },
+    {
+        cardSuit: 'clubs',
+        value: '6',
+        color: 'black',
+    },
+    {
+        cardSuit: 'clubs',
+        value: '7',
+        color: 'black',
+    },
+    {
+        cardSuit: 'clubs',
+        value: '8',
+        color: 'black',
+    },
+    {
+        cardSuit: 'clubs',
+        value: '9',
+        color: 'black',
+    },
+    {
+        cardSuit: 'clubs',
+        value: '10',
+        color: 'black',
+    },
+    {
+        cardSuit: 'clubs',
+        value: 'jack',
+        color: 'black',
+    },
+    {
+        cardSuit: 'clubs',
+        value: 'queen',
+        color: 'black',
+    },
+    {
+        cardSuit: 'clubs',
+        value: 'king',
+        color: 'black',
+    },
+    {
+        cardSuit: 'clubs',
+        value: 'ace',
+        color: 'black',
+    },
+]
+
+// - знайти піковий туз
+
+let aces = cards.filter(el => el.value === 'ace');
+console.log(aces.filter(el => el.cardSuit ==='spade'));
 
 
+// - всі шістки
 
+console.log(cards.filter(el => el.value === '6'))
 
+// - всі червоні карти
 
+console.log(cards.filter(el => el.color === 'red'))
+
+// - всі буби
+
+console.log(cards.filter(el => el.cardSuit === 'diamond'))
+
+// - всі трефи від 9 та більше
+
+let clubsAll = cards.filter(el => el.cardSuit ==='clubs');
+console.log(clubsAll.splice(3 ));
 
 // =========================
 //
 //     Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
 // {
 //     spades:[],
-//         diamonds:[],
+//     diamonds:[],
 //     hearts:[],
 //     clubs:[]
 // }
 
+console.log(cards.reduce())
 
 
 
