@@ -1,21 +1,86 @@
 // - Знайти та вивести довижину настипних стрінгових значень
 // 'hello world', 'lorem ipsum', 'javascript is cool'
+
+const strLength = (str) => {
+    console.log(str.length);
+    return str.length;
+}
+
+strLength('hello world');
+strLength('lorem ipsum');
+strLength('javascript is cool');
+
 // - Перевести до великого регістру наступні стрінгові значення
 // 'hello world', 'lorem ipsum', 'javascript is cool'
+
+const toUpperCase = (str) => {
+    console.log(str.toUpperCase());
+    return str.toUpperCase();
+}
+
+toUpperCase('hello world');
+toUpperCase('lorem ipsum');
+toUpperCase('javascript is cool');
+
+
 // - Перевести до нижнього регістру настипні стрінгові значення
 // 'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
+
+const toLowerCase = (str) => {
+    console.log(str.toLowerCase());
+    return str.toLowerCase();
+}
+
+toLowerCase('HELLO WORLD');
+toLowerCase('LOREM IPSUM');
+toLowerCase('JAVASCRIPT IS COOL');
+
+
+
+
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
-//
+
+const trim = (str) => {
+    console.log(str.trim());
+    return str.trim();
+}
+
+trim(' dirty string   ')
+
+
+
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
 //     let str = 'Ревуть воли як ясла повні';
 // let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
-//
+
+let str = 'Ревуть воли як ясла повні';
+let arr = function stringToarray(str) {
+    console.log(str.split(' '));
+    return str.split(' ');
+}
+arr(str);
+
+
+
+
 // - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
+
+
+
+
+
+
 // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
 //     let nums = [11,21,3];
 // sortNums(nums,'ascending') // [3,11,21]
 // sortNums(nums,'descending') // [21,11,3]
-//
+
+
+
+
+
+
+
 // ==========================
 // - є масив
 // let coursesAndDurationArray = [
@@ -29,6 +94,14 @@
 // -- відсортувати його за спаданням за monthDuration
 // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
 // -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
+
+
+
+
+
+
+
+
 // =========================
 //     описати колоду карт (від 6 до туза без джокерів)
 // - знайти піковий туз
@@ -43,6 +116,12 @@
 //     color:'', // 'red','black'
 // }
 //
+
+
+
+
+
+
 // =========================
 //
 //     Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
@@ -52,12 +131,87 @@
 //     hearts:[],
 //     clubs:[]
 // }
+
+
+
+
+
+
+
 // =========================
 //     взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
 // --написати пошук всіх об'єктів, в який в modules є sass
 // --написати пошук всіх об'єктів, в який в modules є docker
 
-
+let coursesArray = [
+    {
+        title: 'JavaScript Complex',
+        monthDuration: 5,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+    },
+    {
+        title: 'Java Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'java core',
+            'java advanced']
+    },
+    {
+        title: 'Python Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'python core',
+            'python advanced']
+    },
+    {
+        title: 'QA Complex',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+    },
+    {
+        title: 'FullStack',
+        monthDuration: 7,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'react',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'node.js',
+            'python',
+            'java']
+    },
+    {
+        title: 'Frontend',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+    }
+];
 
 
 
