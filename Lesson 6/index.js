@@ -482,12 +482,15 @@ console.log(sasModules, dockerModules);
 // - Напишите функцию cutString(str, n), которая делит строку на подстроки, состоящие из n символов.
 // document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие]
 
+    let resArr = [];
 function cutString(str, n)  {
-    return str.split('', n)
+    for(let i = 0; i < str.length; i += n) {
+        resArr.push(str.substr(i, n));
+    }
+    return resArr
 }
 console.log(cutString('наслаждение', 3))
-document.writeln(cutString('наслаждение',3))
-
+// document.writeln(cutString('наслаждение',3))
 
 
 // - Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
@@ -500,7 +503,9 @@ function delete_characters(string, length) {
 }
 
 console.log(delete_characters(string, 7))
-document.writeln(delete_characters(string, 7))
+// document.writeln(delete_characters(string, 7))
+
+
 
 // - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому
 // всі символи рядка необхідно перевести у верхній регістр.
@@ -513,7 +518,7 @@ function insert_dash(str) {
     return str.toUpperCase().split(' ').join('-');
 }
 console.log(insert_dash(str2))
-document.writeln(insert_dash(str2))
+// document.writeln(insert_dash(str2))
 
 // - Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
 
