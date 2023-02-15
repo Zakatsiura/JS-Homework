@@ -118,31 +118,27 @@ let coursesAndDurationArray = [
 
 // -- відсортувати його за спаданням за monthDuration
 
-const sortOfDuration = () => {
-        console.log(coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration));
-        return coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration);
+let sortOfDuration = (arr) => {
+        return arr.sort((a, b) => b.monthDuration - a.monthDuration);
     }
 
-sortOfDuration(coursesAndDurationArray)
+console.log(sortOfDuration(coursesAndDurationArray));
 
 // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
 
-const filterOfDuration = () => {
-        console.log(coursesAndDurationArray.filter(el => el.monthDuration > 5));
-        return coursesAndDurationArray.filter(el => el.monthDuration > 5);
+let filterOfDuration = (arr) => {
+        return arr.filter(el => el.monthDuration > 5);
     }
 
-filterOfDuration(coursesAndDurationArray)
+console.log(filterOfDuration(coursesAndDurationArray));
 
 // -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
 
-const addID = (arr) => {
-    console.log(arr.map(el => ({ID: Math.floor(Math.random() * (1000 - 100) + 100), ...el})));
-    return arr.map(el => ({ID: Math.floor(Math.random() * (1000 - 100) + 100), ...el}));
-}
+let addID = (arr) => {
+    return arr.map((el, index) => ({ID: index + 1, ...el}));
+    }
 
-addID(coursesAndDurationArray)
-
+console.log(addID(coursesAndDurationArray));
 
 
 // =========================
@@ -340,21 +336,29 @@ let cards = [
 
 // - знайти піковий туз
 
-let aces = cards.filter(el => el.value === 'ace');
-console.log(aces.filter(el => el.cardSuit ==='spade'));
+// let aces = cards.filter(el => el.value === 'ace');
+// console.log(aces.filter(el => el.cardSuit ==='spade'));
+
+// console.log(cards.map())
 
 
 // - всі шістки
 
-console.log(cards.filter(el => el.value === '6'))
+let arrSix = cards.filter(el => el.value === '6');
+
+console.log(arrSix);
 
 // - всі червоні карти
 
-console.log(cards.filter(el => el.color === 'red'))
+let arrRed = cards.filter(el => el.color === 'red');
+
+console.log(arrRed);
 
 // - всі буби
 
-console.log(cards.filter(el => el.cardSuit === 'diamond'))
+let arrDiamonds = cards.filter(el => el.cardSuit === 'diamond');
+
+console.log(arrDiamonds);
 
 // - всі трефи від 9 та більше
 
@@ -371,40 +375,24 @@ console.log(clubsAll.splice(3 ));
 //     clubs:[]
 // }
 
-let spades = [], diamonds = [], hearts = [], clubs = [];
-
-
-for (let i = 0; i < cards.length; i++) {
-     if (cards[i].cardSuit === 'spade') {
-         spades.push(cards[i]);
-        }
-}
-for (let i = 0; i < cards.length; i++) {
-    if (cards[i].cardSuit === 'diamond') {
-        diamonds.push(cards[i])
+let newArr = cards.reduce((acc, card) => {
+    if (card.cardSuit === 'spade') {
+            acc.spades.push(card);
+    } else if (card.cardSuit === 'diamond') {
+            acc.diamonds.push(card);
+    } else if (card.cardSuit === 'heart') {
+            acc.hearts.push(card)
+    } else if (card.cardSuit === 'clubs') {
+            acc.clubs.push(card)
     }
-}
+        return acc},
+    {spades: [], diamonds: [], hearts: [], clubs: []})
 
-for (let i = 0; i < cards.length; i++) {
-    if (cards[i].cardSuit === 'heart') {
-        hearts.push(cards[i])
-    }
-}
-
-for (let i = 0; i < cards.length; i++) {
-    if (cards[i].cardSuit === 'clubs') {
-        clubs.push(cards[i])
-    }
-}
-
-console.log()
-
-
-
+console.log(newArr)
 
 
 // =========================
-//     взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
+//   взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
 // --написати пошук всіх об'єктів, в який в modules є sass
 // --написати пошук всіх об'єктів, в який в modules є docker
 
@@ -478,12 +466,29 @@ let coursesArray = [
     }
 ];
 
+let sasModules = coursesArray.filter(el => el.modules.includes('sass'));
+
+console.log(sasModules);
+
+
+let dockerModules = coursesArray.filter(el => el.modules.includes('docker'));
+
+console.log(sasModules, dockerModules);
 
 
 // Додаткові завдання
 //
 // - Напишите функцию cutString(str, n), которая делит строку на подстроки, состоящие из n символов.
 // document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие]
+
+function cutString(str, n)  {
+    return str.split('');
+}
+console.log(cutString('наслаждение', 3))
+document.writeln(cutString('наслаждение',3))
+
+
+
 // - Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
 //     let str = 'Каждый охотник желает знать';
 // document.writeln(delete_characters(str, 7)); // Каждый
