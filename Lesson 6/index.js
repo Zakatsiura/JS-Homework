@@ -734,7 +734,7 @@ console.log(decreasingArr(coursesArray))
 
 let symb = "о",str22 = "Астрономия это наука о небесных объектах";
 
-function count(str22, stringsearch) {
+function count(str22, symb) {
     let res = 0;
     let strTest = str22.split('')
     for(let i = 0; i < str22.length; i++) {
@@ -752,11 +752,11 @@ console.log(count(str22, symb))
 // document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру'
 
 let str33 = "Сила тяжести приложена к центру масс тела", n = 5;
-function cutString(str, n) {
+function cutString1(str, n) {
     return str.split(' ').slice(0, n).join(' ')
 }
 
-console.log(cutString(str33, n))
+console.log(cutString1(str33, n))
 
 // -стоврити масив книжок (назва, кількість сторінок, автори , жанри).
 // -знайти наібльшу книжку.
