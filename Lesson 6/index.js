@@ -371,8 +371,33 @@ console.log(clubsAll.splice(3 ));
 //     clubs:[]
 // }
 
-console.log(cards.reduce())
+let spades = [], diamonds = [], hearts = [], clubs = [];
 
+
+for (let i = 0; i < cards.length; i++) {
+     if (cards[i].cardSuit === 'spade') {
+         spades.push(cards[i]);
+        }
+}
+for (let i = 0; i < cards.length; i++) {
+    if (cards[i].cardSuit === 'diamond') {
+        diamonds.push(cards[i])
+    }
+}
+
+for (let i = 0; i < cards.length; i++) {
+    if (cards[i].cardSuit === 'heart') {
+        hearts.push(cards[i])
+    }
+}
+
+for (let i = 0; i < cards.length; i++) {
+    if (cards[i].cardSuit === 'clubs') {
+        clubs.push(cards[i])
+    }
+}
+
+console.log()
 
 
 
