@@ -756,13 +756,97 @@ function cutString1(str, n) {
     return str.split(' ').slice(0, n).join(' ')
 }
 
-console.log(cutString1(str33, n))
+console.log(cutString1(str33, n));
+
+
+
 
 // -стоврити масив книжок (назва, кількість сторінок, автори , жанри).
-// -знайти наібльшу книжку.
+
+
+
+let  booksArr = [
+    {
+        title: 'Title11534',
+        pagesAmount: 456,
+        authors: 'Author11',
+        genres: 'genre11',
+    },
+    {
+        title: 'Title22225',
+        pagesAmount: 512,
+        authors: ['Author22', 'Author 21'],
+        genres: 'genre22',
+    },
+    {
+        title: 'Title33343',
+        pagesAmount: 852,
+        authors: 'Author33',
+        genres: 'genre33',
+    },
+    {
+        title: 'Title443425',
+        pagesAmount: 777,
+        authors: 'Author44',
+        genres: ['genre44', 'genre45', 'genre46'],
+    },    {
+        title: 'Title55525235',
+        pagesAmount: 458,
+        authors: 'Author55',
+        genres: ['genre55', 'genre56'],
+    },
+    {
+        title: 'Title66456363663',
+        pagesAmount: 655,
+        authors: ['Author66', 'Author67', 'Author68'],
+        genres: 'genre66',
+    }
+];
+
 // - знайти книжку/ки з найбільшою кількістю жанрів
+
+let biggestGenres = [];
+
+for(let i = 0; i < booksArr.length; i++) {
+    if(Array.isArray(booksArr[i].genres)) {
+            biggestGenres.push(booksArr[i]);
+    }
+    biggestGenres.sort((a, b) => b.genres.length - a.genres.length);
+}
+console.log(biggestGenres[0]);
+
 // - знайти книжку/ки з найдовшою назвою
+
+let longestTitle = booksArr.sort((a, b) => b.title.length - a.title.length);
+console.log(longestTitle[0]);
+
+
+
 // - знайти книжку/ки які писали 2 автори
+
+let twoAuthors = [];
+
+for(let i = 0; i < booksArr.length; i++) {
+    if(Array.isArray(booksArr[i].authors)) {
+        if(booksArr[i].authors.length === 2) {
+            twoAuthors.push(booksArr[i]);
+        }
+    }
+}
+console.log(twoAuthors)
+
 // - знайти книжку/ки які писав 1 автор
+
+let oneAuthor = [];
+
+for(let i = 0; i < booksArr.length; i++) {
+    if(!Array.isArray(booksArr[i].authors)) {
+        oneAuthor.push(booksArr[i]);
+    }
+}
+console.log(oneAuthor);
+
 // - вісортувати книжки по кількості сторінок по зростанню
-//
+
+let biggestPages = booksArr.sort((a, b) => b.pagesAmount - a.pagesAmount);
+console.log(biggestPages[0]);
