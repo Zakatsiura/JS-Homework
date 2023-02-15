@@ -337,10 +337,9 @@ let cards = [
 
 // - знайти піковий туз
 
-// let aces = cards.filter(el => el.value === 'ace');
-// console.log(aces.filter(el => el.cardSuit ==='spade'));
+let aceSpade = cards.filter(el => el.value === 'ace').filter(el => el.cardSuit ==='spade');
 
-// console.log(cards.map())
+console.log(aceSpade)
 
 
 // - всі шістки
@@ -622,17 +621,32 @@ console.log(capitalize('this is new string'))
 // someeMAIL@i.ua
 // some.email@gmail.com
 
+function emailValidator(str) {
+    let result;
+    if (!str.includes('@')) {
+        result = 'Wrong email'
+    } else if (str.split('').indexOf('@') < 2) {
+        result = 'Wrong email'
+    } else if (str.split('').indexOf('.') < (str.split('').indexOf('@') + 3))  {
+        result = 'Wrong email'
+    } else result = 'All good';
+    return result
+}
+console.log(emailValidator('someemail@gmail.com'))
+console.log(emailValidator('someeMAIL@gmail.com'))
+console.log(emailValidator('someeMAIL@i.ua'))
+console.log(emailValidator('some.email@gmail.com'))
 
-
-
-
+// Я дотримувався умови (крапку яка знаходиться не меньше ніж на 2 символ далі після равлика), тому четверта перевірка дає помилку
 
 
 // Примітка
 // Для тих, хто дуже розумний, та почне використовувати регулярні вирази одразу "ні". Своїм мозком подумайте над
 // протоколом, з регулярками будете потім бавитись.
-//
-// - є масивlet coursesArray = [
+
+
+
+// - є масив let coursesArray = [
 //     {
 //         title: 'JavaScript Complex',
 //         monthDuration: 5,
@@ -704,16 +718,46 @@ console.log(capitalize('this is new string'))
 //
 //
 // відсортувати його в спадаючому порядку за кількістю елементів в полі modules
-//
+
+let decreasingArr = (arr) => {
+    return arr.sort((a, b) => b.modules.length  - a.modules.length)
+}
+
+console.log(decreasingArr(coursesArray))
+
+
+
+
 // - Напишіть функцію count(str, stringsearch), яка повертає кількість символів stringsearch у рядку str.
 //     let symb = "о", str = "Астрономия это наука о небесных объектах";
 // document.writeln(count(str, symb)) // 5
-//
+
+let symb = "о",str22 = "Астрономия это наука о небесных объектах";
+
+function count(str22, stringsearch) {
+    let res = 0;
+    let strTest = str22.split('')
+    for(let i = 0; i < str22.length; i++) {
+        if(strTest[i] === symb) {
+            res++
+        }
+    }
+    return res;
+}
+console.log(count(str22, symb))
+
+
 // - Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів.
 //     let str = "Сила тяжести приложена к центру масс тела";
 // document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру'
-//
-//
+
+let str33 = "Сила тяжести приложена к центру масс тела", n = 5;
+function cutString(str, n) {
+    return str.split(' ').slice(0, n).join(' ')
+}
+
+console.log(cutString(str33, n))
+
 // -стоврити масив книжок (назва, кількість сторінок, автори , жанри).
 // -знайти наібльшу книжку.
 // - знайти книжку/ки з найбільшою кількістю жанрів
