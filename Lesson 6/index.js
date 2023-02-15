@@ -75,7 +75,8 @@ const arrToString = (arr1) => {
 arrToString(arr1)
 
 
-// - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
+// - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки
+// в залежності від значення аргументу direction.
 //  let nums = [11,21,3];
 // sortNums(nums,'ascending') // [3,11,21]
 // sortNums(nums,'descending') // [21,11,3]
@@ -362,8 +363,9 @@ console.log(arrDiamonds);
 
 // - всі трефи від 9 та більше
 
-let clubsAll = cards.filter(el => el.cardSuit ==='clubs');
-console.log(clubsAll.splice(3 ));
+let clubsAll = cards.filter(el => el.cardSuit ==='clubs').splice(3 );
+
+console.log(clubsAll);
 
 // =========================
 //
@@ -482,7 +484,7 @@ console.log(sasModules, dockerModules);
 // document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие]
 
 function cutString(str, n)  {
-    return str.split('');
+    return str.split('', n)
 }
 console.log(cutString('наслаждение', 3))
 document.writeln(cutString('наслаждение',3))
@@ -492,36 +494,143 @@ document.writeln(cutString('наслаждение',3))
 // - Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
 //     let str = 'Каждый охотник желает знать';
 // document.writeln(delete_characters(str, 7)); // Каждый
-//
-// - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому всі символи рядка необхідно перевести у верхній регістр.
+
+let string = 'Каждый охотник желает знать';
+function delete_characters(string, length) {
+    return string.split('', length).join('')
+}
+
+console.log(delete_characters(string, 7))
+document.writeln(delete_characters(string, 7))
+
+// - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому
+// всі символи рядка необхідно перевести у верхній регістр.
 //     let str = "HTML JavaScript PHP";
 // document.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'
-//
+
+let str2 = "HTML JavaScript PHP"
+
+function insert_dash(str) {
+    return str.toUpperCase().split(' ').join('-');
+}
+console.log(insert_dash(str2))
+document.writeln(insert_dash(str2))
+
 // - Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
-//
+
+function changeCase(str) {
+    if (!str) return str;
+    return str[0].toUpperCase() + str.slice(1);
+}
+
+console.log(changeCase('first letter of string to upper case '))
+
+
+
 // - Дано список імен.
-//     let n1 = 'Harry..Potter'
+// let n1 = 'Harry..Potter'
 // let n2 = 'Ron---Whisley'
 // let n3 = 'Hermione__Granger'
 // Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
 // let n1 = 'Harry Potter'
 // let n2 = 'Ron Whisley'
 // let n3 = 'Hermione Granger'
-//
-//     - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
-// - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. Відсортувати його за допомоги sort
-// - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. відфільтрувати  його за допомоги filter, залишивши тільки парні числа (без 0!)
-//
+
+let n1 = 'Harry..Potter'
+let n2 = 'Ron---Whisley'
+let n3 = 'Hermione__Granger'
+
+
+function  changeName(str) {
+    return str.replaceAll('-', ' ')
+        .replaceAll('.',' ')
+        .replaceAll('_', ' ')
+        .split(' ')
+        .filter(el => el)
+        .join(' ')
+}
+
+console.log(changeName(n1));
+console.log(changeName(n2));
+console.log(changeName(n3));
+
+
+
+
+
+// - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
+
+let randomNum = function () {
+    return Math.floor(Math.random() * 101);
+}
+
+console.log(randomNum())
+
+
+// - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень.
+// Відсортувати його за допомоги sort
+
+let randArr = [];
+let rangedRandArr = function () {
+    for (let i = 0; i < 10; i++) {
+        randArr.push(randomNum())
+    }
+    return randArr.sort((a, b) => a - b)
+}
+
+console.log(rangedRandArr())
+
+
+
+// - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. відфільтрувати
+// його за допомоги filter, залишивши тільки парні числа (без 0!)
+
+let randArr1 = [];
+let rangedRandArr1 = function () {
+    for (let i = 0; i < 10; i++) {
+        randArr1.push(randomNum())
+    }
+    return randArr1.filter(el => el !==0).filter(el => el % 2 === 0)
+}
+
+console.log(rangedRandArr1())
+
+
+
+
+
 // - Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
-// - Створити функцію-валідатор для адрес електронної пошти. Перевірка повинна включати в себе :данні до знака равлика(@), наявність равлика, крапку яка знаходиться не меньше ніж на 2 символ далі після равлика, функція не чутлива до регістру (some@email.com,SOME@EMAIL.COM,some@EMAIL.com, і тд - однакові значення)
+
+function capitalize(str) {
+    let newStr = str.split(' ');
+    let resStr = '';
+    for (let word of newStr) {
+        resStr = resStr + String(word.replace(word[0], word[0].toUpperCase())) + ' ';
+    }
+    return resStr
+}
+
+console.log(capitalize('this is new string'))
+
+
+// - Створити функцію-валідатор для адрес електронної пошти. Перевірка повинна включати в себе :данні до знака равлика(@),
+// наявність равлика, крапку яка знаходиться не меньше ніж на 2 символ далі після равлика, функція не чутлива до регістру
+// (some@email.com,SOME@EMAIL.COM,some@EMAIL.com, і тд - однакові значення)
 // Протестувати на значеннях
 // someemail@gmail.com
 // someeMAIL@gmail.com
 // someeMAIL@i.ua
 // some.email@gmail.com
-//
+
+
+
+
+
+
+
 // Примітка
-// Для тих, хто дуже розумний, та почне використовувати регулярні вирази одразу "ні". Своїм мозком подумайте над протоколом, з регулярками будете потім бавитись.
+// Для тих, хто дуже розумний, та почне використовувати регулярні вирази одразу "ні". Своїм мозком подумайте над
+// протоколом, з регулярками будете потім бавитись.
 //
 // - є масивlet coursesArray = [
 //     {
