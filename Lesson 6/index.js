@@ -728,7 +728,7 @@ console.log(decreasingArr(coursesArray))
 
 
 
-// - Напишіть функцію count(str, stringsearch), яка повертає кількість символів stringsearch у рядку str.
+// - Напишіть функцію count(str, symb), яка повертає кількість символів symb у рядку str.
 //     let symb = "о", str = "Астрономия это наука о небесных объектах";
 // document.writeln(count(str, symb)) // 5
 
