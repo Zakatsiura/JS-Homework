@@ -485,7 +485,7 @@ console.log(sasModules, dockerModules);
     let resArr = [];
 function cutString(str, n)  {
     for(let i = 0; i < str.length; i += n) {
-        resArr.push(str.substr(i, n));
+        resArr.push(str.substring(i, i + n));
     }
     return resArr
 }
