@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cc387a29-4b37-488a-8abe-20b31e2fcb90" name="Changes" comment="final">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lesson 1/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lesson 2/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson 2/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2L0abxsg4ZOiUJ4lCJybMynAXBW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\IdeaProjects\JS-Okten\Lesson 1" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc387a29-4b37-488a-8abe-20b31e2fcb90" name="Changes" comment="" />
+      <created>1675010528398</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1675010528398</updated>
+      <workItem from="1675010529501" duration="249000" />
+      <workItem from="1675102196196" duration="9000" />
+      <workItem from="1675103563982" duration="8000" />
+      <workItem from="1675177933174" duration="26000" />
+      <workItem from="1675178052004" duration="4000" />
+      <workItem from="1675185733922" duration="5058000" />
+      <workItem from="1675192558773" duration="2271000" />
+      <workItem from="1675272173409" duration="8049000" />
+      <workItem from="1675282429768" duration="432000" />
+      <workItem from="1675358455467" duration="4574000" />
+      <workItem from="1675404616692" duration="127000" />
+      <workItem from="1675404754343" duration="6456000" />
+      <workItem from="1675419918266" duration="4748000" />
+      <workItem from="1675424814809" duration="906000" />
+      <workItem from="1675448152265" duration="1154000" />
+      <workItem from="1675526285479" duration="197000" />
+      <workItem from="1675526491297" duration="20000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial">
+      <created>1675010597993</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675010597993</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial">
+      <created>1675010722849</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675010722849</updated>
+    </task>
+    <task id="LOCAL-00003" summary="initial">
+      <created>1675191215396</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675191215396</updated>
+    </task>
+    <task id="LOCAL-00004" summary="initial">
+      <created>1675192956470</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675192956470</updated>
+    </task>
+    <task id="LOCAL-00005" summary="initial">
+      <created>1675193239578</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675193239578</updated>
+    </task>
+    <task id="LOCAL-00006" summary="initial">
+      <created>1675358626705</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675358626705</updated>
+    </task>
+    <task id="LOCAL-00007" summary="final">
+      <created>1675362354884</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675362354884</updated>
+    </task>
+    <task id="LOCAL-00008" summary="final">
+      <created>1675411349925</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675411349925</updated>
+    </task>
+    <task id="LOCAL-00009" summary="final">
+      <created>1675424452890</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1675424452890</updated>
+    </task>
+    <task id="LOCAL-00010" summary="final">
+      <created>1675425253918</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675425253918</updated>
+    </task>
+    <task id="LOCAL-00011" summary="final">
+      <created>1675425451803</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675425451803</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial" />
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
+  </component>
+</project>

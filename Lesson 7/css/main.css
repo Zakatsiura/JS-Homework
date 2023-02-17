@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: darkblue;
+}
+
+.clock {
+    width: 768px;
+    height: 768px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("clock-face.png") center / cover;
+    border: 4px solid black;
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px greenyellow;
+    position: relative;
+}
+
+.HH {
+    position: absolute;
+}
+.hours {
+    width: 160px;
+}
