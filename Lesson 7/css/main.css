@@ -10,7 +10,7 @@ body {
     align-items: center;
     height: 100vh;
     width: 100%;
-    background: darkblue;
+    background: #f8f8fa;
 }
 
 .clock {
@@ -19,16 +19,88 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("clock-face.png") center / cover;
-    border: 4px solid black;
+    background: url("clock-font.jpg") center / cover;
+    border: 10px solid #343436;
     border-radius: 50%;
-    box-shadow: 0 -15px 15px greenyellow;
     position: relative;
 }
 
-.HH {
+.clock:before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid #343436;
+    background: #f8f8fa;
+    z-index: 111;
+}
+
+.clock .HH {
     position: absolute;
 }
-.hours {
-    width: 160px;
+
+.clock .HH .hours {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+}
+
+.clock .HH .hours:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 160px;
+    z-index: 10;
+    border-radius: 6px 6px 0;
+    background: #343436;
+}
+
+.clock .MM {
+    position: absolute;
+}
+
+.clock .MM .minutes {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+}
+
+.clock .MM .minutes:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 200px;
+    z-index: 11;
+    border-radius: 6px 6px 0;
+    background: #343436;
+}
+
+.clock .SS {
+    position: absolute;
+}
+
+.clock .SS .seconds {
+    width: 420px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+}
+
+.clock .SS .seconds:before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 260px;
+    z-index: 12;
+    border-radius: 6px 6px 0;
+    background: #343436;
 }
