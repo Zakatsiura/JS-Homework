@@ -247,39 +247,79 @@ const target = arrCind.find(Cinderella => Cinderella.size === prince.size);
 console.log(`Cinderella has ${target.name}`)
 
 
+
+
+
+
+
+
 //Додаткові завдання
-//
+
+
+
 // - Створити клас або функцію конструктор, за допомоги якої можна створювати об'єкти наступного вигляду.
 // Конструктор повинен приймати значення для кожної властивості, в т.ч і для властивостей внутрішніх об'єктів
 //
 // {
 //     id: 1,
-//         name: 'Leanne Graham',
+//     name: 'Leanne Graham',
 //     username: 'Bret',
 //     email: 'Sincere@april.biz',
 //     address: {
-//     street: 'Kulas Light',
-//         suite: 'Apt. 556',
-//         city: 'Gwenborough',
-//         zipcode: '92998-3874',
-//         geo: {
-//         lat: '-37.3159',
+//        street: 'Kulas Light',
+//        suite: 'Apt. 556',
+//        city: 'Gwenborough',
+//        zipcode: '92998-3874',
+//        geo: {
+//             lat: '-37.3159',
 //             lng: '81.1496'
-//     }
-// },
+//             }
+//             },
 //     phone: '1-770-736-8031 x56442',
-//         website: 'hildegard.org',
+//     website: 'hildegard.org',
 //     company: {
-//     name: 'Romaguera-Crona',
+//         name: 'Romaguera-Crona',
 //         catchPhrase: 'Multi-layered client-server neural-net',
 //         bs: 'harness real-time e-markets'
+//              }
 // }
-// }
-//
-//
+
+class User333 {
+    constructor(id, name, username, email, street, suite, city, zipcode, lat, lng, phone, website, companyName, catchPhrase, bs) {
+        this.id = id;
+        this.name = name;
+        this.username = username;
+        this.email = email;
+        this.address = {
+            street: street,
+            suite: suite,
+            city: city,
+            zipcode: zipcode,
+            geo: {
+                lat: lat,
+                lng: lng
+            }
+        }
+        this.phone = phone;
+        this.website = website;
+        this.company = {
+            name: companyName,
+            catchPhrase: catchPhrase,
+            bs: bs
+        }
+    }
+}
+
+
+
+
+
+
+
+
 // -  Створити функцію конструктор / клас  який описує об'єкт тегу
 // Поля :
-//     -назва тегу ()
+// - назва тегу ()
 // - опис його дій
 // - масив з атрибутами (2-3 атрибути максимум)
 // Кожен атрибут описати як окремий який буде містити
@@ -308,3 +348,90 @@ console.log(`Cinderella has ${target.name}`)
 // ]
 //
 // }
+
+
+class Tag {
+    constructor(name, description, attributes) {
+        this.name = name;
+        this.description = description;
+        this.attributes = attributes;
+    }
+}
+
+const a = new Tag(
+    'a',
+    'Створює посилання на іншу сторінку або на елемент на поточній сторінці.',
+    [
+        {name: 'href', description: 'Задає адресу документа, на який слід перейти.'},
+        {name: 'target', description: 'Вказує де буде відкрито сторінку, що містить посилання. Може приймати значення _blank, _self, _parent, _top.'}
+    ]
+);
+
+console.log(a)
+
+
+const div = new Tag(
+    'div',
+    'Визначає блок документа.',
+    [
+        {name: 'align', description: 'Вирівнювання вмісту відносно області, яку займає тег.'},
+        {name: 'title', description: 'Добавляє властивість title до блоку, яка містить інформацію про елемент.'}
+    ]
+);
+
+console.log(div);
+
+const h1 = new Tag(
+    'h1',
+    'Заголовок першого рівня.',
+    [
+        {name: 'align', description: 'Вирівнювання заголовку.'},
+        {name: 'class', description: 'Задає ім\'я класу, яке дозволяє зв\'язати тег зі стилевим оформленням.'}
+    ]
+);
+
+console.log(h1)
+
+const span = new Tag(
+    'span',
+    'Визначає невеликий фрагмент документа.',
+    [
+        {name: 'class', description: 'Задає ім\'я класу, яке дозволяє зв\'язати тег зі стилевим оформленням.'},
+        {name: 'title', description: 'Добавляє властивість title до елементу, яка містить інформацію про елемент.'}
+    ]
+);
+
+console.log(span)
+
+const input = new Tag(
+    'input',
+    'Створює однорядковий рядок для введення даних або елемент управління в формі.',
+    [
+        {name: 'type', description: 'Задає тип елемента форми.'},
+        {name: 'name', description: 'Ім\'я поля, призначене для того, щоб обробник форми міг його ідентифікувати.'}
+    ]
+);
+
+console.log(input);
+
+
+const form = new Tag(
+    'form',
+    'Визначає форму на веб-сторінці.',
+    [
+        {
+            name: 'accept-charset',
+            description: 'Вказує кодування даних які відправляються на сервер.'
+        },
+        {
+            name: 'action',
+            description: 'Вказує URL адресу обробника форми.'
+        },
+        {
+            name: 'method',
+            description: 'Встановлює метод, який буде використовуватись для відправлення даних форми. За замовчуванням використовується метод GET.'
+        }
+    ]
+);
+
+console.log(form);
