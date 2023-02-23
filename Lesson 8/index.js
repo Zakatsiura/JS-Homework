@@ -52,9 +52,32 @@ class Client {
 
 // створити пустий масив, наповнити його 10 об'єктами Client
 
+let arrClient = [];
+
+let client1 = new Client(101, "name01", "surname01", 'email01', 11111111, [{item01: 10}, {item02: 15}, {item03: 33}]);
+arrClient.push(client1);
+let client2 = new Client(102, "name02", "surname02", 'email02', 22222222, [{item01: 10}, {item02: 15}, {item03: 33}]);
+arrClient.push(client2);
+let client3 = new Client(103, "name03", "surname03", 'email03', 33333333, [{item01: 10}, {item02: 15}, {item03: 33}]);
+arrClient.push(client3);
+let client4 = new Client(104, "name04", "surname04", 'email04', 44444444, [{item01: 10}, {item02: 15}, {item03: 33}]);
+arrClient.push(client4);
+let client5 = new Client(105, "name05", "surname05", 'email05', 55555555, [{item01: 10}, {item02: 15}, {item03: 33}]);
+arrClient.push(client5);
+let client6 = new Client(106, "name06", "surname06", 'email06', 66666666, [{item01: 10}, {item02: 15}, {item03: 33}]);
+arrClient.push(client6);
+let client7 = new Client(107, "name07", "surname07", 'email07', 77777777, [{item01: 10}, {item02: 15}, {item03: 33}]);
+arrClient.push(client7);
+let client8 = new Client(108, "name08", "surname08", 'email08', 88888888, [{item01: 10}, {item02: 15}, {item03: 33}]);
+arrClient.push(client8);
+let client9 = new Client(109, "name09", "surname09", 'email09', 99999999, [{item01: 10}, {item02: 15}, {item03: 33}]);
+arrClient.push(client9);
+let client10 = new Client(110, "name10", "surname10", 'email10', 10101010, [{item01: 10}, {item02: 15}, {item03: 33}]);
+arrClient.push(client10);
 
 
 
+console.log(arrClient)
 
 // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню.
 // (sort)
