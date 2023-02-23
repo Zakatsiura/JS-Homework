@@ -243,6 +243,10 @@ for(Cinderella of arrCind) {
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
 
 
+const target = arrCind.find(Cinderella => Cinderella.size === prince.size);
+console.log(`Cinderella has ${target.name}`)
+
+
 //Додаткові завдання
 //
 // - Створити клас або функцію конструктор, за допомоги якої можна створювати об'єкти наступного вигляду.
