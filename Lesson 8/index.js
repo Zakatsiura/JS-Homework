@@ -132,7 +132,7 @@ car1.changeYear(2000)
 car1.addDriver = function(driver) {
     this.driver = driver;
 }
-car1.addDriver({age: 51, sex: 'male', height: 155});
+car1.addDriver({age: 51, gender: 'male', height: 155});
 
 console.log(car1);
 
@@ -152,20 +152,62 @@ class Car2 {
     }
 }
 
-let car2 = new Car2('Civic', 'Honda', 2022, 180, 1.8);
-console.log(car2)
+let car2 = new Car2('Civic', 'Honda', 2021, 170, 1.8);
+console.log(car2);
 
 
 
 // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+
+car2.drive = function () {
+    console.log(`Їдемо зі швидкістю ${this.maxSpeed} на годину`);
+}
+car2.drive();
+
 // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
+
+car2.info = function () {
+    console.log(`модель - ${this.model}, виробник - ${this.manufacturer}, рік - ${this.year}, макимальна швидкість - ${this.maxSpeed}, об'єм двигуна - ${this.engValue}`);
+}
+car2.info()
+
+
+
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+
+car2.increaseMaxSpeed = function (newSpeed) {
+    console.log(`нова швидкість - ${this.maxSpeed + newSpeed}`);
+}
+car2.increaseMaxSpeed(65)
+
+
+
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
+
+car2.changeYear = function (newValue) {
+    console.log(`встановимо новий рік випуску - ${this.year = newValue} недорого!`)
+}
+car2.changeYear(1980)
+
+
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
-//
-//
-//
-// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+
+car2.addDriver = function(driver) {
+    this.driver = driver;
+}
+car2.addDriver({age: 60, gender: 'male', height: 185});
+
+console.log(car2);
+
+
+
+
+
+// -Створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+
+
+
+
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
