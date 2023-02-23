@@ -12,8 +12,8 @@ function User(id, name, surname, email, phone) {
 
 let userArr = [];
 
-for(let i = 1; i < 11; i++) {
-userArr.push(new User(+`${i}`, `name ${i}`, `surname ${i}`, `email@${i}`, +`${i}${i}${i}${i}${i}${i}`))
+for (let i = 1; i < 11; i++) {
+    userArr.push(new User(+`${i}`, `name ${i}`, `surname ${i}`, `email@${i}`, +`${i}${i}${i}${i}${i}${i}`))
 }
 console.log(userArr)
 
@@ -23,8 +23,6 @@ console.log(userArr)
 const userArr1 = userArr.filter(el => (el.id % 2 === 0));
 
 console.log(userArr1);
-
-
 
 
 // - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
@@ -38,7 +36,7 @@ console.log(userArr2);
 // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
 
 class Client {
-    constructor(id, name, surname , email, phone, order) {
+    constructor(id, name, surname, email, phone, order) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -63,7 +61,7 @@ let client4 = new Client(104, "name04", "surname04", 'email04', 44444444, [{item
 arrClient.push(client4);
 let client5 = new Client(105, "name05", "surname05", 'email05', 55555555, [{item01: 10}, {item02: 15}, {item03: 33}, {item004: 55}, {item05: 15}, {item06: 33}]);
 arrClient.push(client5);
-let client6 = new Client(106, "name06", "surname06", 'email06', 66666666, [{item01: 10}, {item02: 15}, {item03: 33},{item04: 44}]);
+let client6 = new Client(106, "name06", "surname06", 'email06', 66666666, [{item01: 10}, {item02: 15}, {item03: 33}, {item04: 44}]);
 arrClient.push(client6);
 let client7 = new Client(107, "name07", "surname07", 'email07', 77777777, [{item01: 10}, {item02: 15}, {item03: 33}]);
 arrClient.push(client7);
@@ -75,32 +73,90 @@ let client10 = new Client(110, "name10", "surname10", 'email10', 10101010, [{ite
 arrClient.push(client10);
 
 
-
 console.log(arrClient)
 
 // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню.
 // (sort)
 
 const orderedClient = arrClient.sort((a, b) => a.order.length - b.order.length);
-
+// Я не певен, що правильно зрозумів завдання - вивів по кількості найменувань товарів. Якщо потрібно вивести по кількості товарів в найменуваннях, то буде інакше
 console.log(orderedClient);
 
 
-
-
-
 // - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску,
-//   максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+//   максимальна швидкість, об'єм двигуна.
+
+function Car(model, manufacturer, year, maxSpeed, engValue) {
+    this.model = model;
+    this.manufacturer = manufacturer;
+    this.year = year;
+    this.maxSpeed = maxSpeed;
+    this.engValue = engValue;
+}
+
+let car1 = new Car('Civic', 'Honda', 2022, 220, 1.8);
+console.log(car1)
+
+//   додати в об'єкт функції:
 // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+
+car1.drive = function () {
+    console.log(`Їдемо зі швидкістю ${this.maxSpeed} на годину`);
+}
+car1.drive();
+
 // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
+
+car1.info = function () {
+    console.log(`модель - ${this.model}, виробник - ${this.manufacturer}, рік - ${this.year}, макимальна швидкість - ${this.maxSpeed}, об'єм двигуна - ${this.engValue}`);
+}
+car1.info()
+
+
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+
+car1.increaseMaxSpeed = function (newSpeed) {
+    console.log(`нова швидкість - ${this.maxSpeed + newSpeed}`);
+}
+car1.increaseMaxSpeed(45)
+
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
+
+car1.changeYear = function (newValue) {
+    console.log(`встановимо новий рік випуску - ${this.year = newValue} недорого!`)
+}
+car1.changeYear(2000)
+
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
-//
-//
+
+car1.addDriver = function(driver) {
+    this.driver = driver;
+}
+car1.addDriver({age: 51, sex: 'male', height: 155});
+
+console.log(car1);
+
+
+
 // - (Те саме, тільки через клас)
 // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна
 // швидкість, об'єм двигуна. додати в об'єкт функції:
+
+class Car2 {
+    constructor(model, manufacturer, year, maxSpeed, engValue) {
+        this.model = model;
+        this.manufacturer = manufacturer;
+        this.year = year;
+        this.maxSpeed = maxSpeed;
+        this.engValue = engValue;
+    }
+}
+
+let car2 = new Car2('Civic', 'Honda', 2022, 180, 1.8);
+console.log(car2)
+
+
+
 // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
 // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
@@ -113,12 +169,6 @@ console.log(orderedClient);
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
-
-
-
-
-
-
 
 
 //Додаткові завдання
