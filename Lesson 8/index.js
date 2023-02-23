@@ -205,11 +205,41 @@ console.log(car2);
 
 // -Створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
 
+function Cinderella(name, age, size) {
+    this.name = name;
+    this.age = age;
+    this.size = size;
+}
 
+let arrCind = [];
+
+for (let i = 1; i < 11; i++) {
+    arrCind.push(new Cinderella(`name ${i}`, +`${15 + i}`, +`${20 + i}`))
+}
+console.log(arrCind)
 
 
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+
+class Prince {
+    constructor(name, age, size) {
+    this.name = name;
+    this.age = age;
+    this.size = size;
+    }
+}
+
+let prince = new Prince("Carl", 30,22);
+
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+
+for(Cinderella of arrCind) {
+    if(Cinderella.size === prince.size) {
+        console.log(`Cinderella has ${Cinderella.name}`)
+    }
+}
+
+
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
 
 
