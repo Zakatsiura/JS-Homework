@@ -44,7 +44,7 @@ class Client {
         this.surname = surname;
         this.email = email;
         this.phone = phone;
-        this.order = [];
+        this.order = order;
     }
 }
 
