@@ -167,7 +167,7 @@ let simpsons = [
     },
 ];
 
-const simpsonsFamily = document.createElement('div');
+
 for (const el of simpsons) {
     const member = document.createElement('div');
     member.classList.add('member');
