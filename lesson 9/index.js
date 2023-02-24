@@ -30,17 +30,15 @@ const blockClone = block.cloneNode(true);
 document.body.appendChild(blockClone);
 
 
-
-
 // =====================================================
 // - Є масив:
 //     ['Main','Products','About us','Contacts']
 // Зробити ul в середині якої будуть лежати елементи масиву (кожен в своєму li)
 
-let firstArr = ['Main','Products','About us','Contacts'];
+let firstArr = ['Main', 'Products', 'About us', 'Contacts'];
 
 const arrEl = document.createElement('ul');
-for(let elem of firstArr) {
+for (let elem of firstArr) {
     let el = document.createElement('li');
     el.innerText = elem;
     arrEl.appendChild(el)
@@ -71,11 +69,18 @@ let coursesAndDurationArray = [
     {title: 'Frontend', monthDuration: 4}
 ];
 
-const info = document.createElement('div');
-
-
-
-
+for (const el of coursesAndDurationArray) {
+    const info = document.createElement('div');
+    const courseInfo = document.createElement('ul');
+    const el1 = document.createElement('li');
+    el1.innerText = el.title;
+    courseInfo.appendChild(el1);
+    const el2 = document.createElement('li');
+    el2.innerText = el.monthDuration;
+    courseInfo.appendChild(el2);
+    info.append(courseInfo)
+    document.body.appendChild(info)
+}
 
 
 // =========================================================
@@ -97,16 +102,9 @@ const info = document.createElement('div');
 // ==========================
 
 
-
-
-
-
-
 // - є масив simpsons, котрий лежить в arrays.js (на цей момент ви вже знаєте де він знаходиться)
 // Проітерувати його, створиши для кожного об'єкту  масиву <div class='member'> та наповнити його данними з об'єкту.
 //     Якщо людською мовою: під кожного члена родини зробити блок та наповнити його інформацією з цього об'єкту
-
-
 
 
 // =========================
