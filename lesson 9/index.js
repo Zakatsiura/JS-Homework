@@ -201,28 +201,52 @@ for (const el of simpsons) {
 // для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png який лежить в папці з поточним фйлом
 // ------------------
-//
+
+
+// ============================================================
 //     - Створити довільний елемент з id = text та створити кнопку.Використовуючи JavaScript, зробіть так, щоб при натисканні
 //     на кнопку зникав елемент з id="text".
 
 
-// <div id="text">Це текст, який буде зникати</div>
-// <button id="btn">Натисни, щоб зникнути текст</button>
-//
-//
-// const textElement = document.getElementById('text');
-//
-// const btn = document.getElementById('btn');
-//
-// btn.addEventListener('click', () => {
-//     textElement.style.display = 'none';
-// });
+const text = document.createElement('p');
+text.setAttribute('id', 'text');
+text.innerText = 'Це текст, який буде зникати';
+document.body.appendChild(text);
 
+const btn = document.createElement('button');
+btn.setAttribute('id', 'btn');
+btn.innerText = 'Натисни, щоб текст зникнув';
+document.body.appendChild(btn);
 
+btn.addEventListener('click', () => {
+    text.style.display = 'none';
+});
 
+const space = document.createElement('div');
+document.body.appendChild(space)
+
+// ===========================================================
 //     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту
 //     та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
-//
+
+
+const ageInput = document.createElement('input');
+ageInput.placeholder = 'Enter your age, please'
+document.body.appendChild(ageInput);
+
+const confirmButton = document.createElement('button');
+confirmButton.innerText = 'Confirm'
+document.body.appendChild(confirmButton);
+confirmButton.addEventListener('click', function () {
+    const age = ageInput.value;
+    if (ageInput.value !== 'number') {
+        alert ('INPUT ERROR')
+    } else
+    (age > 18) ? alert ('You are over 18') : alert ('You are under 18');
+    ageInput.value =''
+    // console.log('Вік:', age);
+});
+// ===========================================================
 // *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
