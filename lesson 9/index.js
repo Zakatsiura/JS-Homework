@@ -4,15 +4,18 @@
 
 
 const block = document.createElement('div');
-block.classList.add('wrap', 'collapse', 'alpha', 'beta');
+block.classList.add('wrap');
 
 const h1 = document.createElement('h1');
+h1.classList.add('collapse');
 h1.innerText = 'Mega post';
 
 const p = document.createElement('p');
+p.classList.add('alpha');
 p.innerText = 'This is the coolest post I have ever seen.'
 
 const p2 = document.createElement('p');
+p2.classList.add('beta');
 p2.innerText = 'You are the best bro.';
 
 const p3 = document.createElement('p');
@@ -38,12 +41,12 @@ document.body.appendChild(blockClone);
 let firstArr = ['Main', 'Products', 'About us', 'Contacts'];
 
 const arrEl = document.createElement('ul');
-for (let elem of firstArr) {
-    let el = document.createElement('li');
+for (const elem of firstArr) {
+    const el = document.createElement('li');
     el.innerText = elem;
-    arrEl.appendChild(el)
+    arrEl.appendChild(el);
 }
-document.body.appendChild(arrEl)
+document.body.appendChild(arrEl);
 
 
 // ======================================================
@@ -78,8 +81,8 @@ for (const el of coursesAndDurationArray) {
     const el2 = document.createElement('li');
     el2.innerText = el.monthDuration;
     courseInfo.appendChild(el2);
-    info.append(courseInfo)
-    document.body.appendChild(info)
+    info.appendChild(courseInfo);
+    document.body.appendChild(info);
 }
 
 
@@ -98,10 +101,23 @@ for (const el of coursesAndDurationArray) {
 // За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу,
 // та <p class='description'> з monthDuration елементу.
 //     Завдання робити через цикли.
-//
+
+for (const el of coursesAndDurationArray) {
+    const info1 = document.createElement('div');
+    info1.classList.add('item');
+    const el1 = document.createElement('h1');
+    el1.classList.add('heading');
+    el1.innerText = el.title;
+    info1.appendChild(el1);
+    const el2 = document.createElement('p');
+    el2.classList.add('description');
+    el2.innerText = el.monthDuration;
+    info1.appendChild(el2);
+    document.body.appendChild(info1);
+}
+
+
 // ==========================
-
-
 // - є масив simpsons, котрий лежить в arrays.js (на цей момент ви вже знаєте де він знаходиться)
 // Проітерувати його, створиши для кожного об'єкту  масиву <div class='member'> та наповнити його данними з об'єкту.
 //     Якщо людською мовою: під кожного члена родини зробити блок та наповнити його інформацією з цього об'єкту
