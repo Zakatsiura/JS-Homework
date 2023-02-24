@@ -238,12 +238,13 @@ const confirmButton = document.createElement('button');
 confirmButton.innerText = 'Confirm'
 document.body.appendChild(confirmButton);
 confirmButton.addEventListener('click', function () {
-    const age = ageInput.value;
-    if (ageInput.value !== 'number') {
+    const age = parseInt(ageInput.value);
+    if (typeof age !== 'number') {
         alert ('INPUT ERROR')
-    } else
-    (age > 18) ? alert ('You are over 18') : alert ('You are under 18');
-    ageInput.value =''
+    } else {
+        (age > 18) ? alert('You are over 18') : (age > 0) ? alert('You are under 18') : alert('Will wait when you are born')
+        ageInput.value = ''
+    }
 });
 
 
