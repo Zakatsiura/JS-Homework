@@ -1,37 +1,54 @@
 // - створити блок,
 // - додати йому класи wrap, collapse, alpha, beta
 // - додати стилі(довільні значення) : колір фону, колір тексту, розмір тексту
-// - додати цей блок в body.
-// - клонувати його повністю, та додати клон в body.
 
 
 const block = document.createElement('div');
 block.classList.add('wrap', 'collapse', 'alpha', 'beta');
 
-const wrap = document.createElement('h1');
-wrap.innerText = 'Mega post';
+const h1 = document.createElement('h1');
+h1.innerText = 'Mega post';
 
-const collapse = document.createElement('p');
-collapse.innerText = 'This is the coolest post I have ever seen.'
+const p = document.createElement('p');
+p.innerText = 'This is the coolest post I have ever seen.'
 
-const alpha = document.createElement('p');
-alpha.innerText = 'You are the best bro.';
+const p2 = document.createElement('p');
+p2.innerText = 'You are the best bro.';
 
-const beta = document.createElement('p');
-beta.innerText = 'See you soon!';
+const p3 = document.createElement('p');
+p3.innerText = 'See you soon!';
 
-block.append(wrap, collapse, alpha, beta);
+block.append(h1, p, p2, p3);
+
+// - додати цей блок в body.
 
 document.body.appendChild(block);
 
+// - клонувати його повністю, та додати клон в body.
 
 const blockClone = block.cloneNode(true);
 document.body.appendChild(blockClone);
 
+
+
+
+// =====================================================
 // - Є масив:
 //     ['Main','Products','About us','Contacts']
 // Зробити ul в середині якої будуть лежати елементи масиву (кожен в своєму li)
-//
+
+let firstArr = ['Main','Products','About us','Contacts'];
+
+const arrEl = document.createElement('ul');
+for(let elem of firstArr) {
+    let el = document.createElement('li');
+    el.innerText = elem;
+    arrEl.appendChild(el)
+}
+document.body.appendChild(arrEl)
+
+
+// ======================================================
 // - Є масив
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},
@@ -44,8 +61,24 @@ document.body.appendChild(blockClone);
 // Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
 // Завдання робити через цикли.
 //
-// =========================
-//
+
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+
+const info = document.createElement('div');
+
+
+
+
+
+
+// =========================================================
 //     - Є масив
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},
@@ -62,11 +95,20 @@ document.body.appendChild(blockClone);
 //     Завдання робити через цикли.
 //
 // ==========================
-//
+
+
+
+
+
+
+
 // - є масив simpsons, котрий лежить в arrays.js (на цей момент ви вже знаєте де він знаходиться)
 // Проітерувати його, створиши для кожного об'єкту  масиву <div class='member'> та наповнити його данними з об'єкту.
 //     Якщо людською мовою: під кожного члена родини зробити блок та наповнити його інформацією з цього об'єкту
-//
+
+
+
+
 // =========================
 //     Цикл в циклі
 // - Є масив coursesArray котрий лежить в arrays.js (на цей момент ви вже знаєте де він знаходиться)
