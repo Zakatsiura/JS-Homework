@@ -301,7 +301,7 @@ for (let el of coursesArray) {
 
     const modulesName = document.createElement('div');
     modulesName.classList.add('modulesName');
-    modulesName.innerText = `Modules name - ${module}`;
+    modulesName.innerText = `Module name - ${module}`;
     document.body.appendChild(modulesName)
 }
     document.body.appendChild(wrapCourses)
