@@ -242,13 +242,55 @@ confirmButton.addEventListener('click', function () {
     if (typeof age !== 'number') {
         alert ('INPUT ERROR')
     } else {
-        (age > 18) ? alert('You are over 18') : (age > 0) ? alert('You are under 18') : alert('Will wait when you are born')
+        (age > 18) ? alert('You are over 18') : (age > 0) ? alert('You are under 18') : alert('Should wait till you are born')
         ageInput.value = ''
     }
 });
+
+const space1 = document.createElement('div');
+document.body.appendChild(space1)
+
 
 
 // ===========================================================
 // *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
+
+const row = document.createElement('input');
+row.placeholder = 'Enter number of row';
+document.body.appendChild(row);
+
+const cell = document.createElement('input');
+cell.placeholder = 'Enter number of cell';
+document.body.appendChild(cell);
+
+const content = document.createElement('input');
+content.placeholder = 'Enter your content';
+document.body.appendChild(content);
+
+const confirm = document.createElement('button');
+confirm.innerText = 'Confirm'
+document.body.appendChild(confirm);
+
+confirm.addEventListener('click', function () {
+    const rowNumber = parseInt(row.value);
+    const cellNumber = parseInt(cell.value);
+    const contentInner = content.value;
+
+    let table = document.createElement('table');
+    for (let i = 0; i < rowNumber; i++) {
+        const tr = document.createElement('tr');
+        for (let j = 0; j < cellNumber; j++) {
+            const td = document.createElement('td');
+            td.innerText = contentInner;
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+        row.value = '';
+        cell.value = '';
+        content.value = '';
+    }
+    document.body.appendChild(table);
+    confirm.addEventListener('click', () => table.remove(), )
+})
