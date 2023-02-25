@@ -202,6 +202,89 @@ for (const el of simpsons) {
 // Приклад структири знаходиться у файлі example.png який лежить в папці з поточним фйлом
 // ------------------
 
+let coursesArray = [
+    {
+        title: 'JavaScript Complex',
+        monthDuration: 5,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+    },
+    {
+        title: 'Java Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'java core',
+            'java advanced']
+    },
+    {
+        title: 'Python Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'python core',
+            'python advanced']
+    },
+    {
+        title: 'QA Complex',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+    },
+    {
+        title: 'FullStack',
+        monthDuration: 7,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'react',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'node.js',
+            'python',
+            'java']
+    },
+    {
+        title: 'Frontend',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+    }
+];
+
+const wrapCourses = document.createElement('div');
+wrapCourses.classList.add('wrapCourses');
+
+const titleCourses = document.createElement('div');
+titleCourses.classList.add ('titleCourses');
+
+const titleMonthDuration = document.createElement('div');
+titleMonthDuration.classList.add('titleMonthDuration');
+
+const titleModules = document.createElement('div');
+titleModules.classList.add('titleModules');
+
+
 
 // ============================================================
 //     - Створити довільний елемент з id = text та створити кнопку.Використовуючи JavaScript, зробіть так, щоб при натисканні
@@ -240,9 +323,9 @@ document.body.appendChild(confirmButton);
 confirmButton.addEventListener('click', function () {
     const age = parseInt(ageInput.value);
     if (typeof age !== 'number') {
-        alert ('INPUT ERROR')
+        alert ('INPUT ERROR');
     } else {
-        (age > 18) ? alert('You are over 18') : (age > 0) ? alert('You are under 18') : alert('Should wait till you are born')
+        (age > 18) ? alert ('You are over 18') : (age > 0) ? alert ('You are under 18') : alert ('Should wait till you are born')
         ageInput.value = ''
     }
 });
