@@ -294,10 +294,16 @@ for (let el of coursesArray) {
 
     const titleModules = document.createElement('div');
     titleModules.classList.add('titleModules');
+    titleModules.innerText = `Modules included:`;
+    document.body.appendChild(titleModules);
+
+    for (let module of el.modules) {
 
     const modulesName = document.createElement('div');
     modulesName.classList.add('modulesName');
-
+    modulesName.innerText = `Modules name - ${module}`;
+    document.body.appendChild(modulesName)
+}
     document.body.appendChild(wrapCourses)
 
 }
