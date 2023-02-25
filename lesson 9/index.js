@@ -276,6 +276,7 @@ for (let el of coursesArray) {
 
     const wrapCourses = document.createElement('div');
     wrapCourses.classList.add('wrapCourses');
+    wrapCourses.innerText = '';
 
     const titleCourses = document.createElement('div');
     titleCourses.classList.add('titleCourses');
