@@ -272,18 +272,35 @@ let coursesArray = [
     }
 ];
 
-const wrapCourses = document.createElement('div');
-wrapCourses.classList.add('wrapCourses');
+for (let el of coursesArray) {
 
-const titleCourses = document.createElement('div');
-titleCourses.classList.add ('titleCourses');
+    const wrapCourses = document.createElement('div');
+    wrapCourses.classList.add('wrapCourses');
 
-const titleMonthDuration = document.createElement('div');
-titleMonthDuration.classList.add('titleMonthDuration');
+    const titleCourses = document.createElement('div');
+    titleCourses.classList.add('titleCourses');
+    titleCourses.innerText = `Course - ${el.title}`;
+    document.body.appendChild(titleCourses);
 
-const titleModules = document.createElement('div');
-titleModules.classList.add('titleModules');
+    const titleMonthDuration = document.createElement('span');
+    titleMonthDuration.classList.add('titleMonthDuration');
+    titleMonthDuration.innerText = `Duration (month) - ${el.monthDuration}`;
+    document.body.appendChild(titleMonthDuration);
 
+    const amountHourDuration = document.createElement('span');
+    amountHourDuration.classList.add('amountHourDuration')
+    amountHourDuration.innerText = `Amount of hours - ${el.hourDuration}`;
+    document.body.appendChild(amountHourDuration);
+
+    const titleModules = document.createElement('div');
+    titleModules.classList.add('titleModules');
+
+    const modulesName = document.createElement('div');
+    modulesName.classList.add('modulesName');
+
+    document.body.appendChild(wrapCourses)
+
+}
 
 
 // ============================================================
