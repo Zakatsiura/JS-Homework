@@ -398,6 +398,7 @@ confirm.addEventListener('click', function () {
         cell.value = '';
         content.value = '';
     }
+    // видалення елементу з ДОМ-дерева
     document.body.appendChild(table);
-    confirm.addEventListener('click', () => table.remove(), )
+    confirm.addEventListener('click', () => table.remove())
 })
