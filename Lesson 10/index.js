@@ -16,7 +16,7 @@ function submitForm() {
 // ==========================
 
 let count = localStorage.getItem('count');
-const al = totalCount = parseInt(document.getElementById('counter').innerText)
+const initialValue = totalCount = parseInt(document.getElementById('counter').innerText)
     count++;
     totalCount = parseInt(document.getElementById('counter').innerText) + count;
     document.getElementById('counter').innerText = totalCount
@@ -29,7 +29,7 @@ document.querySelector('.reload').onclick = function () {
 
 document.querySelector('.clear').onclick = function () {
     localStorage.clear();
-    document.getElementById('counter').innerText = al.toString()
+    document.getElementById('counter').innerText = initialValue.toString()
 }
 
 
