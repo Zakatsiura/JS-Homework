@@ -6,8 +6,26 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lesson 10</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
+<form>
+    <label for="name">Ім'я:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="surname">Прізвище:</label>
+    <input type="text" id="surname" name="surname"><br><br>
+
+    <label for="age">Вік:</label>
+    <input type="text" id="age" name="age"><br><br>
+
+    <input type="button" value="Submit" onclick="submitForm()">
+</form>
+
+<div id="result"></div>
+
+
+<script src="index.js"></script>
 </body>
 </html>
