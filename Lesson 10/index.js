@@ -1,4 +1,4 @@
-// Стоврити форму з трьома полями для name,sruname,age та кнопкою. При натисканні на кнопку зчитати данні з полів, та вивести об'єкт в документ. Іншими словами : заповниои форму, натиснули кнопку, під формою з'явився блок з вашим об'єктом
+// Стоврити форму з трьома полями для name,surname,age та кнопкою. При натисканні на кнопку зчитати данні з полів, та вивести об'єкт в документ. Іншими словами : заповниои форму, натиснули кнопку, під формою з'явився блок з вашим об'єктом
 // ==========================
 
 function submitForm() {
@@ -6,10 +6,8 @@ function submitForm() {
     const surname = document.getElementById("surname").value;
     const age = document.getElementById("age").value;
 
-    const person = { "name": name, "surname": surname, "age": age };
-
-    const resultElement = document.getElementById("result");
-    resultElement.innerHTML = JSON.stringify(person);
+    const result = document.getElementById("result");
+    result.innerHTML = `Name - ${name}, Surname - ${surname}, Age - ${age}`;
 }
 
 
