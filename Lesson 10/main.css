@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: whitesmoke;
 }
 .container {
     display: flex;
@@ -21,6 +22,7 @@ body {
     box-sizing: border-box;
     border: 2px solid darkblue;
     padding: 5px;
+    border-radius: 10px;
 }
 #name, #surname, #age, #button {
     font-size: 30px;
@@ -38,13 +40,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70px;
+    width: 90px;
     height: 70px;
     font-size: 50px;
     color: darkred;
     box-sizing: border-box;
     border: 2px solid darkred;
+    border-radius: 5px;
 }
-.clear {
+#button {
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 5px;
+
+}
+.clear, .reload {
     font-size: 30px;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 5px;
 }

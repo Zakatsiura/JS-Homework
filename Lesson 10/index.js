@@ -23,12 +23,14 @@ const al = totalCount = parseInt(document.getElementById('counter').innerText)
     console.log(count)
     localStorage.setItem('count', count);
 
+document.querySelector('.reload').onclick = function () {
+    location.reload();
+}
+
 document.querySelector('.clear').onclick = function () {
     localStorage.clear();
     document.getElementById('counter').innerText = al.toString()
 }
-
-
 
 
 
@@ -37,6 +39,11 @@ document.querySelector('.clear').onclick = function () {
 // при відвідуванні якої потрібно відмалювати всю інформацію про відвідування сторінки index.html. Інфу НЕ виводити в консоль,
 // а побудувати дом структуру під кожну сессію
 // =========================
+
+
+
+
+
 //     зробити масив на 100 об'єктів та дві кнопки prev next
 // при завантажені сторінки з'являються перші 10 об'єктів.
 //     При натисканні next виводяться настпні 10 об'єктів

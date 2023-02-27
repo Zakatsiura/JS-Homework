@@ -13,13 +13,13 @@
 <!--    TASK 1-->
 <form class="form"><br>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name"><br><br>
+    <input type="text" id="name" placeholder="Enter your name" name="name"><br><br>
 
     <label for="surname">Surname:</label>
-    <input type="text" id="surname" name="surname"><br><br>
+    <input type="text" id="surname" placeholder="Enter your surname" name="surname"><br><br>
 
     <label for="age">Age:</label>
-    <input type="text" id="age" name="age"><br><br>
+    <input type="text" id="age" placeholder="Enter your age" name="age"><br><br>
 
     <input type="button" id="button" value="Submit" onclick="submitForm()"><br>
 </form><br>
@@ -28,6 +28,7 @@
 
 <!--    TASK 2-->
 <div id="counter">4</div><br>
+    <input type="button" class="reload" value="Reload your browser" onclick="clear()"><br>
     <input type="button" class="clear" value="Clear Local storage" onclick="clear()">
 
 </div>
