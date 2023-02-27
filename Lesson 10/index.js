@@ -48,3 +48,27 @@ document.querySelector('.clear').onclick = function () {
 // при завантажені сторінки з'являються перші 10 об'єктів.
 //     При натисканні next виводяться настпні 10 об'єктів
 // При натисканні prev виводяться попередні 10 об'єктів
+
+let arr = [...Array(100).keys()]; // создаем массив из 100 элементов
+let startIndex = 0; // начальный индекс для отображения элементов массива
+const step = 10; // количество элементов, которые будут отображаться за один раз
+
+function showItems() {
+    let endIndex = startIndex + step;
+    let itemsToShow = arr.slice(startIndex, endIndex);
+    const result = document.getElementById('array');
+    result.innerHTML = `${itemsToShow}`
+}
+
+let prevButton = document.querySelector(".back");
+prevButton.addEventListener("click", function() {
+    startIndex = Math.max(startIndex - step, 0);
+    showItems();
+});
+
+let nextButton = document.querySelector(".forward");
+nextButton.addEventListener("click", function() {
+    startIndex = Math.min(startIndex + step, arr.length - step);
+    showItems();
+});
+showItems();
