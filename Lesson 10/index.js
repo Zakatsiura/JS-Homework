@@ -49,9 +49,12 @@ document.querySelector('.clear').onclick = function () {
 //     При натисканні next виводяться настпні 10 об'єктів
 // При натисканні prev виводяться попередні 10 об'єктів
 
-let arr = [...Array(100).keys()]; // создаем массив из 100 элементов
-let startIndex = 0; // начальный индекс для отображения элементов массива
-const step = 10; // количество элементов, которые будут отображаться за один раз
+const arr = [];
+for (let i = 0; i < 100; i++) {
+    arr.push(` obj № ${i} `);
+}
+let startIndex = 0;
+const step = 10;
 
 function showItems() {
     let endIndex = startIndex + step;
