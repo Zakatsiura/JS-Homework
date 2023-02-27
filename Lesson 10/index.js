@@ -20,7 +20,7 @@ const initialValue = totalCount = parseInt(document.getElementById('counter').in
     count++;
     totalCount = parseInt(document.getElementById('counter').innerText) + count;
     document.getElementById('counter').innerText = totalCount
-    console.log(count)
+// Щоб не враховувалось перше завантаження сторінки можна зробити (totalCount - 1) в рядку вище
     localStorage.setItem('count', count);
 
 document.querySelector('.reload').onclick = function () {

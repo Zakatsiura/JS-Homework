@@ -52,6 +52,7 @@ body {
     width: 200px;
     margin: 0 auto;
     border-radius: 5px;
+    cursor: pointer;
 
 }
 .clear, .reload {
@@ -59,4 +60,5 @@ body {
     width: 300px;
     margin: 0 auto;
     border-radius: 5px;
+    cursor: pointer;
 }
