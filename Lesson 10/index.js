@@ -55,7 +55,7 @@ for (let i = 0; i < 100; i++) {
 }
 let startIndex = 0;
 const step = 10;
-
+console.log(arr)
 function showItems() {
     let endIndex = startIndex + step;
     let itemsToShow = arr.slice(startIndex, endIndex);

@@ -117,7 +117,7 @@ for (const el of coursesAndDurationArray) {
 
     const el2 = document.createElement('p');
     el2.classList.add('description');
-    el2.innerText = el.monthDuration;
+    el2.innerText = `Duration - ${el.monthDuration} month`;
     info1.appendChild(el2);
 
     document.body.appendChild(info1);
