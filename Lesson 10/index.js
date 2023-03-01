@@ -47,10 +47,13 @@ sessions.push(visit);
 
 localStorage.setItem('sessions', JSON.stringify(sessions));
 
-let info = document.getElementById('info');
-info.innerText = sessions;
+let list = document.getElementById('info');
 
-
+for (let session of sessions) {
+    let visitInfo = document.createElement('li');
+    visitInfo.textContent = session;
+    list.appendChild(visitInfo)
+}
 
 
 //     зробити масив на 100 об'єктів та дві кнопки prev next
