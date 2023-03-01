@@ -16,11 +16,11 @@ function submitForm() {
 // сторінки буде додавати до неї +1
 // ==========================
 
-let count = localStorage.getItem('count');
+let count = localStorage.getItem('count') || 0;
 const initialValue = totalCount = parseInt(document.getElementById('counter').innerText)
-    count++;
-    totalCount = parseInt(document.getElementById('counter').innerText) + count;
+    totalCount = parseInt(document.getElementById('counter').innerText) + (+count);
     document.getElementById('counter').innerText = totalCount
+    count++;
     localStorage.setItem('count', count);
 
 document.querySelector('.reload').onclick = function () {

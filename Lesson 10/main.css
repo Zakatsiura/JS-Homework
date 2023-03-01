@@ -15,7 +15,7 @@ body {
     color: darkblue;
     margin: 0 auto;
     width: 450px;
-    font-size: 30px;
+    font-size: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,10 +25,10 @@ body {
     border-radius: 10px;
 }
 #name, #surname, #age, #button {
-    font-size: 30px;
+    font-size: 25px;
 }
 #result {
-    font-size: 30px;
+    font-size: 25px;
     margin: 0 auto;
     height: 40px;
     color: darkblue;
@@ -65,7 +65,7 @@ body {
     width: 450px;
 }
 .clear, .reload {
-    font-size: 30px;
+    font-size: 25px;
     width: 300px;
     margin: 0 auto;
     border-radius: 5px;
@@ -101,7 +101,7 @@ li {
     padding: 10px;
 }
 .forward, .back {
-    font-size: 35px;
+    font-size: 25px;
     width: 130px;
     cursor: pointer;
     border-radius: 5px;
