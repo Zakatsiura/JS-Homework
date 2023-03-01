@@ -74,8 +74,7 @@ body {
 .visit {
     display: flex;
     flex-direction: column;
-    width: 600px;
-    /*height: 300px;*/
+    width: 900px;
     box-sizing: border-box;
     border: 2px solid darkblue;
     border-radius: 10px;
@@ -84,7 +83,11 @@ body {
     text-align: center;
 }
 .paragraph {
-    font-size: 25px;
+    font-size: 35px;
+    margin: 0;
+}
+li {
+    font-size: 20px;
 }
 .show {
     display: flex;

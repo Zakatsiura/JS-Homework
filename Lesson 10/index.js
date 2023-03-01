@@ -40,6 +40,8 @@ document.querySelector('.clear').onclick = function () {
 // а побудувати дом структуру під кожну сессію
 // =========================
 
+
+// <-------цей код повинен бути на сторінці index.html:------>
 let visit = Date();
 
 let sessions = JSON.parse(localStorage.getItem('sessions')) || [];
@@ -47,6 +49,7 @@ sessions.push(visit);
 
 localStorage.setItem('sessions', JSON.stringify(sessions));
 
+// <--------Цей код повинен бути на сторінці session.html:-------->
 let list = document.getElementById('info');
 
 for (let session of sessions) {
@@ -54,6 +57,9 @@ for (let session of sessions) {
     visitInfo.textContent = session;
     list.appendChild(visitInfo)
 }
+// <--------Додатково на сторінці session.html потрібно додати блок <div id="info"><ul id="session-list"></ul></div>
+// для відображення інформації------->
+
 
 
 //     зробити масив на 100 об'єктів та дві кнопки prev next
