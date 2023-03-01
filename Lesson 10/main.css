@@ -71,6 +71,19 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+.visit {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 300px;
+    box-sizing: border-box;
+    border: 2px solid darkblue;
+    margin: 0 auto;
+    text-align: center;
+}
+.paragraph {
+    font-size: 25px;
+}
 .show {
     display: flex;
     justify-content: space-evenly;

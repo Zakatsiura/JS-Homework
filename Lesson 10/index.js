@@ -40,6 +40,15 @@ document.querySelector('.clear').onclick = function () {
 // а побудувати дом структуру під кожну сессію
 // =========================
 
+let visit = Date();
+
+let sessions = JSON.parse(localStorage.getItem('sessions')) || [];
+sessions.push(visit);
+
+localStorage.setItem('sessions', JSON.stringify(sessions));
+
+let info = document.getElementById('info');
+info.innerText = sessions;
 
 
 
@@ -55,7 +64,6 @@ for (let i = 0; i < 100; i++) {
 }
 let startIndex = 0;
 const step = 10;
-console.log(arr)
 function showItems() {
     let endIndex = startIndex + step;
     let itemsToShow = arr.slice(startIndex, endIndex);
