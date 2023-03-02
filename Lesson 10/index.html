@@ -14,15 +14,15 @@
     <!--    TASK 1-->
     <form action="/someURL" class="form">
         <label for="name">Name:
-        <input type="text" id="name" placeholder="Enter your name" name="name">
-            </label><br>
+            <input type="text" id="name" placeholder="Enter your name" name="name">
+        </label><br>
 
         <label for="surname">Surname:
-        <input type="text" id="surname" placeholder="Enter your surname" name="surname">
+            <input type="text" id="surname" placeholder="Enter your surname" name="surname">
         </label><br>
 
         <label for="age">Age:
-        <input type="text" id="age" placeholder="Enter your age" name="age">
+            <input type="text" id="age" placeholder="Enter your age" name="age">
         </label><br>
 
         <input type="button" id="button" value="Submit" onclick="submitForm()"><br>
@@ -44,7 +44,9 @@
     <!--    TASK 3-->
     <div class="visit">
         <p class="paragraph"><i>Your previous visit information:</i></p>
-        <div id="info"><ul id="session-list"></ul></div>
+        <div id="info">
+            <ul id="session-list"></ul>
+        </div>
     </div>
     <br>
 
@@ -55,6 +57,22 @@
             <input type="button" class="back" value="Prev">
             <input type="button" class="forward" value="Next">
         </div>
+    </div>
+    <br>
+
+    <!--    TASK 5-->
+    <div class="result">
+        <label>Row number:
+            <input type="number" id="row" placeholder="row">
+        </label><br>
+        <label>Cell number:
+            <input type="number" id="cell" placeholder="cell">
+        </label><br>
+        <label>Your content:
+            <input type="text" id="content" placeholder="content">
+        </label><br>
+        <button id="btn" onclick="createTable()">Create table</button>
+        <div id="confirm"></div>
     </div>
 
 </div>

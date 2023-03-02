@@ -113,3 +113,22 @@ li {
     font-size: 22px;
     justify-content: center;
 }
+.table {
+    width: 500px;
+    height: 100px;
+
+}
+#row, #cell, #content, #btn, #confirm {
+    font-size: 25px;
+}
+.result {
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border: 2px solid darkblue;
+}
