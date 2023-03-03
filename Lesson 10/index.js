@@ -108,7 +108,7 @@ showItems();
 //     (Додатковачастина для завдання)
 
 
-function createTable() {
+function table() {
     const rows = document.getElementById("row").value;
     const cols = document.getElementById("cell").value;
     const content = document.getElementById("content").value;
