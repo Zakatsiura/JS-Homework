@@ -115,7 +115,7 @@ function table() {
 
     let row = "<tr>";
     for (let i = 0; i < cols; i++) {
-        row += "<td>" + content + "</td>";
+        row += "<td class='td'>" + content + "</td>";
     }
     row += "</tr>";
 
