@@ -23,8 +23,6 @@ fetch("http://jsonplaceholder.typicode.com/users")
     .catch(error => console.error(error));
 
 
-
-
 const userDetails = document.getElementById("user-details");
 const urlParams = new URLSearchParams(window.location.search);
 const userId = urlParams.get("id");
